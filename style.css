@@ -1,0 +1,97 @@
+html {
+    background-color:#333945;
+}
+div {
+	border-radius: 15px;
+}
+
+#header {
+	z-index: 1;
+	position: relative;
+	width: 100%;
+	margin-top: 0px;
+	height: 60px;
+	background-color: #4EAEB5;
+	margin-bottom: -60px;
+}
+
+#name {
+    position:relative;
+    left:20px;
+    top:-30px;
+	float:right;
+	margin-left: 30px;
+	font-size: 40px;
+	color: #5EAEB5;
+	font-family: Impact;
+}
+
+#email{
+    position:relative;
+    left:1015px;
+    top:-10px;
+	float:right;
+	font-size: 15px;
+	font-family: Arial #87C325;
+	color: #51973F;
+}
+p a{
+    color:#BEF150;
+    font-family:Arial;
+    font-size:20px;
+    float:right;
+    position:absolute;
+    top:25px;
+    font-family:Arial;
+    font-size:20px
+}
+#menu{
+    right:670px;
+}
+.between1 {
+    right:770px;
+    position: relative;
+    float: right;
+}
+h4 {
+	margin-left: 5px;
+	margin-bottom: 15px;
+	font-family: Verdana, sans-serif;
+}
+
+.right p {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: -10px;
+}
+a:hover {
+	color:rgb(0, 242, 255);
+}
+.left {
+	position: relative;
+	float: left;
+	margin-top: 70px;
+	width: 5%;
+	height: 729px;
+	background-color: #778898;
+	margin-bottom: 10px;
+}
+.right {
+	position: relative;
+	float: right;
+	margin-top: 70px;
+	width: 94%;
+	height: 729px;
+	background-color: #778898;
+	margin-bottom: 10px;
+}
+#footer {
+	position: relative;
+	height: 50px;
+	background-color: #3F6183;
+	clear: both;
+	font-family: Verdana, sans-serif;
+	font-size: 18px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+}
