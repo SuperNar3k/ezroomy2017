@@ -14,23 +14,36 @@ div {
 	background-color: #4EAEB5;
 	margin-bottom: -60px;
 }
-#menus{
+#name{
+	float:left;
     position:relative;
-	float:right;
 	font-weight:bold;
-	font-size: 15px;
+	font-size: 25px;
 	font-family: Arial #87C325;
 	color: #51973F;
+}
+.menus{
+    position:relative;
+	float:right;
+	margin-right: 10px;
+	font-weight:bold;
+	font-size: 25px;
+	font-family: Arial #87C325;
+	color: #51973F;
+    top:20px;
+    font-family:Arial;
+    font-size:20px;
 }
 p a{
     color:#BEF150;
     font-family:Arial;
     font-size:20px;
     float:right;
-    position:absolute;
-    top:25px;
+    position:relative;
+	top:25px;
+	margin-right: 5px;
     font-family:Arial;
-    font-size:20px
+    font-size:20px;
 }
 h4 {
 	margin-left: 5px;
@@ -50,8 +63,8 @@ a:hover {
 	position: relative;
 	float: left;
 	margin-top: 70px;
-	width: 5%;
-	height: 729px;
+	width: 8%;
+	height: 700px;
 	background-color: #778898;
 	margin-bottom: 10px;
 }
@@ -59,8 +72,8 @@ a:hover {
 	position: relative;
 	float: right;
 	margin-top: 70px;
-	width: 94%;
-	height: 729px;
+	width: 50%;
+	height: 700px;
 	background-color: #778898;
 	margin-bottom: 10px;
 }
