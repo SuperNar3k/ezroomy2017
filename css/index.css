@@ -16,9 +16,8 @@ div {
 }
 #menus{
     position:relative;
-    left:1015px;
-    top:-10px;
 	float:right;
+	font-weight:bold;
 	font-size: 15px;
 	font-family: Arial #87C325;
 	color: #51973F;
