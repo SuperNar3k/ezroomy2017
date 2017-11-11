@@ -14,19 +14,7 @@ div {
 	background-color: #4EAEB5;
 	margin-bottom: -60px;
 }
-
-#name {
-    position:relative;
-    left:20px;
-    top:-30px;
-	float:right;
-	margin-left: 30px;
-	font-size: 40px;
-	color: #5EAEB5;
-	font-family: Impact;
-}
-
-#email{
+#menus{
     position:relative;
     left:1015px;
     top:-10px;
@@ -44,14 +32,6 @@ p a{
     top:25px;
     font-family:Arial;
     font-size:20px
-}
-#menu{
-    right:670px;
-}
-.between1 {
-    right:770px;
-    position: relative;
-    float: right;
 }
 h4 {
 	margin-left: 5px;
