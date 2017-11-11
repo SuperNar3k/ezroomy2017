@@ -1,0 +1,12 @@
+Colors- Blue:	
+		HTML code:  	#1C676C
+		RGB code:	R: 28 G: 103 B: 108
+	MoreBlue-LessGreen:
+		HTML code:	#51973F
+		RGB code:	R: 81 G: 151 B: 63
+	LessBlue-MoreGreen:
+		HTML code:	#87C325
+		RGB code:	R: 135 G: 195 B: 3
+	Green:
+		HTML code:	#BEF301
+		RGB code:	R: 190 G: 243 B: 1
