@@ -16,7 +16,7 @@
 
     </nav>
 
-    <form id="signup" class="form" action="userprofile.php" method="post">
+    <form id="signup" class="form" action="signupConfirmed.php" method="post">
             <h2 class="logTitle">Log In</h2>
             <hr class="loghr">
 
