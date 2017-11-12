@@ -14,7 +14,7 @@
 
     <?php include "nav.php"; ?>
 
-    <form id="login" class="form" action="userprofile.php" method="post">
+    <form id="login" class="form" action="loginConfirm.php" method="post">
             <h2 class="logTitle">Log In</h2>
             <hr class="loghr">
         <label class="field">
@@ -26,7 +26,7 @@
             <input type="password" placeholder="Password" name="passwordLogIn" id="passwordLogIn" class="input">
         </label>
 
-        <a href="signup.html" id="newAccount">Don't have an account?</a>
+        <a href="signup.php" id="newAccount">Don't have an account?</a>
 
         <input type="submit" class="logButton">
         

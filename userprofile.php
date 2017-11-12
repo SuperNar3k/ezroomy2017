@@ -1,16 +1,36 @@
 <?php
+//----------
+    include "session.php";
 
-    if(isset($_POST["usernameLogIn"])) {
-        
-        $username = $_POST["usernameLogIn"];
+//----------
+    // if(isset($_POST["usernameLogIn"])) {
+    //     $username = $_POST["usernameLogIn"];
+    // } else if(isset($_POST["passwordLogIn"])) {
+    //     $password = $_POST["passwordLogIn"];
+    // }
+    $username = $_SESSION["username"];
 
-    } else if(isset($_POST["passwordLogIn"])) {
+    echo $username . " THIS IS FROM SESSION";
 
-        $password = $_POST["passwordLogIn"];
+    include "database.php";
 
-    }
+    //  $sql = "SELECT username FROM user where username=";
+   
+
+    //  $stmt = $pdo->prepare($sql);
+    //  $stmt->execute(); //order of arrays corresponds order of ?
+    //  $rows = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+    $sql = "SELECT * FROM user WHERE username=:myUser";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(["myUser" => $username]); //order of arrays corresponds order of ?
+    $rows = $stmt->fetchAll(PDO::FETCH_OBJ);
+
     
 
-?>
+     foreach($rows as $row) { 
+        ?>
+            <p><?=$row->username?> tel: <?=$row->password?></p>
 
-<h1> Hello <?= $username?> </h1>
+        <?php } ?>
+
