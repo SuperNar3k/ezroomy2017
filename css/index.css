@@ -3,25 +3,22 @@ body {
 	padding: 0px;
 	margin:0px;
 }
-
 #header {
-	position: relative;
-	height: 60px;
+	position: fixed;
+	height: 50px;
+	width:1100px;
 	background-color: #393939;
 	display: flex;
 	align-self: center;
 	justify-content: space-around;
 	flex-flow: row nowrap;
 	flex-basis: 10px;
+	width:100%;
+    box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
 }
-#icon{
+.icon{
 	transition:400ms;
-	height:60px;
-	float:left;
-}
-img:hover{
-	transform: translateY(-5px);
-    transition: 400ms;
+	height:50px;
 }
 #footer {
 	position: relative;
@@ -34,16 +31,12 @@ img:hover{
 	justify-content: space-around;
 	align-items: center;
 	color: rgb(0, 0, 0);
-	flex-direction: row;
-	display: flex;
-	align-self: center;
-	justify-content: space-around;
 	flex-flow: row nowrap;
 	margin-right: 10px;
 	flex-shrink:2;
 	flex-basis: 10px;
 }
-#name{
+.name{
 	float:left;
     position:relative;
 	font-weight:bold;
@@ -52,20 +45,34 @@ img:hover{
 	text-decoration: none;
 	flex-grow: 1;
 }
+.icon:hover{
+	transform: translateY(-2px);
+	transition: 400ms;
+}
+.name:hover{
+	color:rgb(74, 202, 111);
+	transform: translateY(-2px);
+	transition: 400ms;
+}
 .menus{
 	z-index: 1;
     position:relative;
 	float:none;
 	margin-right: 20px;
-	font-weight:bold;
-	font-size: 25px;
-	color: rgb(0, 0, 0);
+	font-size: 15px;
+	color: rgb(255, 255, 255);
 	margin-top:10px;
+	text-decoration: none;
 }
-a:hover {
+.menus:hover {
 	color:rgb(74, 202, 111);
 	transform: translateY(-5px);
-    transition: 400ms;
+	transition: 400ms;
+}
+#bottomtext:hover {
+	color:rgb(74, 202, 111);
+	transform: translateY(-2px);
+	transition: 400ms;
 }
 a{
     transition: 400ms;
@@ -73,7 +80,7 @@ a{
 .center {
 	position: relative;
 	float: left;
-	height: 720px;
+	height: 900px;
 	display: flex;
 	background-color: #ffffff;
 }
