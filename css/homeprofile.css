@@ -69,29 +69,13 @@ table{
 }
 th, td {
     border-bottom: 1px solid rgba(221, 221, 221, 0.301);
-    border-right: 1px solid rgba(221, 221, 221, 0.301);
     padding: 10px;
 }
 div{
 	z-index: 2;
 	position: absolute;
 	color: rgb(255, 255, 255);
-	font-size: 60px;
-	top: 10%;
-	font-weight: bold;
-	align-content: top;
-	justify-content: space-around;
-	align-items: stretch;
-	background-size: 100% 100%;
-	flex-direction: row;
-	flex-wrap: wrap;
-	text-transform: capitalize;
-}
-li{
-	z-index: 2;
-	position: absolute;
-	color: rgb(255, 255, 255);
-	font-size: 16px;
+	/* font-size: 60px; */
 	top: 10%;
 	font-weight: bold;
 	align-content: top;
