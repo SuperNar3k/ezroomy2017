@@ -27,6 +27,7 @@ include "database.php";?>
 			 ?>
 		 <p id="info">House ID: <?php echo $dbuserhouseid?></p>
 		 <p id="info">Housing Address: 1083 Chicago Street</p>
+</div>
 		 <?php include "footer.php";?>
 		 
 </body>
