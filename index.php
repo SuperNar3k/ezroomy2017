@@ -8,7 +8,8 @@
 	<body>
 		<div id="header">
             <p>
-			<a id="name" href="https://www.easybill.tech" img src="hiresweb.png" alt="Icon">EZROOMY</a>
+            <img src="hiresweb.png" alt="Icon">
+			<a id="name" href="https://www.easybill.tech">EZROOMY</a>
             <a class="menus" href="login.php"> Sign-up/Log-in </a>
             <a class="menus"> Profile </a>
 			<a class="menus"> Menu </a>
