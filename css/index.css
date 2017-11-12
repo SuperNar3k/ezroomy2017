@@ -47,10 +47,10 @@ img:hover{
 	float:left;
     position:relative;
 	font-weight:bold;
-	font-size: 30px;
+	font-size: 40px;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
-	flex-grow: 2;
+	flex-grow: 1;
 }
 .menus{
 	z-index: 1;
@@ -58,7 +58,7 @@ img:hover{
 	float:none;
 	margin-right: 20px;
 	font-weight:bold;
-	font-size: 15px;
+	font-size: 25px;
 	color: rgb(0, 0, 0);
 	margin-top:10px;
 }

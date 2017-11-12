@@ -12,9 +12,9 @@
 		<div id="header">
             <img id="icon" src="icon/hiresweb.png" alt="Icon">
 			<a id="name" href="https://www.easybill.tech">EZROOMY</a>
+			<a class="menus"> Home Profile </a>
+            <a class="menus"> User Profile </a>
             <a class="menus" href="login.php"> Sign-up/Log-in </a>
-            <a class="menus"> Profile </a>
-			<a class="menus"> Menu </a>
 		</div>
 		<div class="center"></div>
 		<div id="footer">
