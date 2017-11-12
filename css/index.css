@@ -1,5 +1,9 @@
 html {
     background-color:#333945;
+	font-family: 'Lato', sans-serif;
+	padding: 0px;
+	margin: 0px;
+	
 }
 div {
 	border-radius: 15px;
@@ -23,7 +27,6 @@ div {
 	height: 50px;
 	background-color: #3F6183;
 	clear: both;
-	font-family: Verdana, sans-serif;
 	font-size: 18px;
 	display: flex;
 	justify-content: space-around;
@@ -31,13 +34,14 @@ div {
 	color: rgb(255, 255, 255);
 	flex-direction: row;
 }
-.name{
+#name{
 	float:left;
     position:relative;
 	font-weight:bold;
 	font-size: 25px;
-	font-family: Arial #87C325;
-	color: #51973F;
+	color: rgb(0, 0, 0);
+	flex-grow: 3;
+	text-decoration: none;
 }
 .menus{
     position:relative;
@@ -45,25 +49,13 @@ div {
 	margin-right: 20px;
 	font-weight:bold;
 	font-size: 15px;
-	color: #51973F;
+	color: rgb(0, 0, 0);
     margin-top:10px;
-    font-family:Arial;
-}
-p a{
-    color:#BEF150;
-    font-family:Arial;
-    font-size:20px;
-    float:right;
-    position:relative;
-	top:25px;
-	margin-right: 5px;
-    font-family:Arial;
-    font-size:20px;
+	flex-grow: 1;
 }
 h4 {
 	margin-left: 5px;
 	margin-bottom: 15px;
-	font-family: Verdana, sans-serif;
 }
 
 .right p {
@@ -89,7 +81,7 @@ a:hover {
 	position: relative;
 	float: right;
 	margin-top: 70px;
-	width: 50%;
+	width: 90%;
 	height: 700px;
 	display: flex;
 	background-color: #778898;
