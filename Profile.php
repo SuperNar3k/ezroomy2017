@@ -12,6 +12,10 @@
 	<body>
  		<?php include 'nav.php';?>
  		<div class="centerinfo"></div>
+		 <p>User Profile</p>
+		 <p>House ID: 19D0IB6P3MO</p>
+		 <p>Housing Address: 1083 Chicago Street</p>
 		 <?php include "footer.php";?>
+		 
 </body>
 </html>
