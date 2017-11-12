@@ -1,18 +1,17 @@
 .centerinfo {
-	z-index: 0;
 	position: relative;
 	float: left;
 	height: 900px;
 	display: flex;
-	background-color: #ffffff;
+	background-color: #856B52;
 	align-content: center;
 	justify-content: center;
 	background-size: 100% 100%;
 }
 .imageProfile{
 	z-index: 0;
-	width:1000px;
-	height:667px;
+	width:100%;
+	height:100%;
 }
 #info{
 	z-index: 2;
