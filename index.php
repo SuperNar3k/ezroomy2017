@@ -12,7 +12,7 @@
 		<?php include "nav.php";?>
 		<div class="center">
 			<!-- <img class=imageIndex src="images/indexBar.jpg" alt="Split the Bill!"> -->
-			<!-- <a id="startinfo">Share the Bills with Your Roomies!</a> -->
+			<a id="startinfo">Share the Bills with Your Roomies!</a>
 		</div>
 		<?php include "footer.php";?>
 	</body>

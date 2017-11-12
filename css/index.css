@@ -87,7 +87,8 @@ a{
 	justify-content: center;
 	height: 900px;
 	display: flex;
-	background-image: transparent url("images/indexBar.jpg") no repeat center center;
+	background-size: 100% 100%;
+	background-image: url("images/indexBar.jpg");
 	background-color: 	#C7D290;
 }
 #startinfo{
