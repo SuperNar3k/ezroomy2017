@@ -107,7 +107,7 @@ a{
 	top: 30%;
 	transition: 400ms;
 }
-#startbuttontext{
+a{
 	text-decoration: none;
 }
 #startbutton:hover{
