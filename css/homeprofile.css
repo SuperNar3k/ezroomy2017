@@ -1,44 +1,20 @@
 .dropbtn {
     color: white;
     font-size: 30px;
-    border: .2px solid;;
-    background-color: rgba(255, 255, 255, 0.123);
+    border: .2px solid;
     cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
 }
 button{
     height:100%;
     width:100%;
 }
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    margin-top:60px;
-    background-color: #f9f9f921;
-    color: white;
-    font-size:30px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+#header1{
+    font-weight: bold;
+    background-color: #b1b1b13f;
 }
-tr:hover {background-color: #b1b1b12d}
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    text-decoration: none;
-    display: block;
+tr:hover {
+    background-color: #b1b1b118
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
 body {
 	font-family: 'Lato', sans-serif;
 	padding: 0px;
@@ -48,7 +24,6 @@ body {
 	position: relative;
 	height: 900px;
 	display: flex;
-	background-color: #856B52;
 }
 .homeimage{
 	z-index: 0;
@@ -64,7 +39,8 @@ table{
 	color: rgb(255, 255, 255);
     font-size: 30px;
     border-collapse: collapse;
-	top: 30%;
+    top: 30%;
+    width:66.60%;
 	align-content: top;
 	justify-content: space-around;
 	flex-direction: row;
@@ -74,6 +50,8 @@ table{
 th, td {
     border-bottom: 1px solid rgba(221, 221, 221, 0.301);
     border-right: 1px solid rgba(221, 221, 221, 0.301);
+    border-left: 1px solid rgba(221, 221, 221, 0.301);
+    border-top: 1px solid rgba(221, 221, 221, 0.301);
     padding: 10px;
 }
 div{
@@ -82,7 +60,6 @@ div{
 	color: rgb(255, 255, 255);
 	font-size: 60px;
 	top: 10%;
-	font-weight: bold;
 	align-content: top;
 	justify-content: space-around;
 	align-items: stretch;
@@ -90,4 +67,18 @@ div{
 	flex-direction: row;
 	flex-wrap: wrap;
 	text-transform: capitalize;
+}
+#userlist{
+	z-index: 2;
+	position: absolute;
+	color: rgba(197, 197, 197, 0.767);
+	font-size: 20px;
+    top: 60%;
+    left:180px;
+    text-decoration: underline;
+    display: flex;
+	text-transform: capitalize;
+	justify-content: center;
+	align-items: stretch;
+	background-size: 100% 100%;
 }

@@ -17,66 +17,35 @@
     <?php include "nav.php"; ?>
     <div class="homeinfo">
         <img class="homeimage" src="images/homeprofilebackground.jpg">
-        <div id="hometitle">Home</div>
+        <div id="hometitle">Home <a id="userlist">(<?php echo $_SESSION["Username"];?>)</a></div>
+
         <table>
             <tr>
-                <th>Bill</th>
-                <th>Date Due</th>
-                <th>Name</th>
-                <th>Cost</th>
+                <th id="header1">Bill</th>
+                <th id="header1">Date Due</th>
+                <th id="header1">Name</th>
+                <th id="header1">Cost</th>
             </tr>
             <tr>
-                <td>
-                <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                  <div id="myDropdown" class="dropdown-content">
-                    <a href="#home">Electricity</a>
-                    <a href="#about">Water</a>
-                    <a href="#contact">Rent</a>
-                  </div>
-                </div>
-                
-                <script>
-                /* When the user clicks on the button, 
-                toggle between hiding and showing the dropdown content */
-                function myFunction() {
-                    document.getElementById("myDropdown").classList.toggle("show");
-                }
-                
-                // Close the dropdown if the user clicks outside of it
-                window.onclick = function(event) {
-                  if (!event.target.matches('.dropbtn')) {
-                
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var i;
-                    for (i = 0; i < dropdowns.length; i++) {
-                      var openDropdown = dropdowns[i];
-                      if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                      }
-                    }
-                  }
-                }
-                </script>
-                </td>
+                <td>Rent</td>
                 <td>xx/xx/xx</td>
                 <td>Bob</td>
                 <td>$666</td>
             </tr>
             <tr>
-                <td>Lois</td>
+                <td>Electricity</td>
                 <td>xx/xx/xx</td>
                 <td>Griffin</td>
                 <td>$150</td>
             </tr>
             <tr>
-                <td>Joe</td>
+                <td>Water</td>
                 <td>xx/xx/xx</td>
                 <td>Swanson</td>
                 <td>$300</td>
             </tr>
             <tr>
-                <td>Cleveland</td>
+                <td>Internet</td>
                 <td>xx/xx/xx</td>
                 <td>Brown</td>
                 <td>$250</td>
