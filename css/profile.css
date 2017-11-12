@@ -25,6 +25,22 @@ body {
 	top: 20%;
 	background-size: 100% 100%;
 }
+div{
+	
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	list-style: none;
+	z-index: 2;
+	position: absolute;
+	color: rgb(255, 255, 255);
+	font-size: 30px;
+	top: 20%;
+	align-content: top;
+	justify-content: space-around;
+	align-items: stretch;
+	background-size: 100% 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
 ul{
 	
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -34,7 +50,7 @@ ul{
 	color: rgb(255, 255, 255);
 	font-size: 30px;
 	top: 20%;
-	align-content: center;
+	align-content: left;
 	justify-content: space-around;
 	align-items: stretch;
 	background-size: 100% 100%;
