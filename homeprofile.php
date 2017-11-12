@@ -16,7 +16,9 @@
 <body>
 
     <?php include "nav.php"; ?>
-    <div>
+    <div class="homeinfo">
+        <img id="homeimage" src="images/homeprofilebackground.jpg">
+        <div id="hometitle">Home</div>
         <table>
     <tr>
         <th>Bill</th>
