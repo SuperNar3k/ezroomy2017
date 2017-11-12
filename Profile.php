@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <?php session_start();
 include "database.php";?>
-
+<?php
+	//collecting user house id
+	$sql = "SELECT * FROM user WHERE username=:myUser";
+	$stmt = $pdo->prepare($sql);
+	$stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
+	$user = $stmt->fetch(PDO::FETCH_OBJ);
+	$dbuserhouseid = $user->homeid;
+	$dbuserphonenumber=$user->phonenumber;
+	$dbuseremail=$user->email;
+	?>
 <html lang="en">
 <head>
    		<meta charset="UTF-8">
@@ -17,17 +26,10 @@ include "database.php";?>
  		<div class="centerinfo">
 			<img class=imageProfile src="images/userpage.jpg">
 			<div id="userinfo"><?php echo $_SESSION["Username"];?>'s Profile</div>
-			
 			<ul>
 				<li id="info">Username: <?php echo $_SESSION["Username"];?></li>
-				<?php
-					//collecting user house id
-					$sql = "SELECT * FROM user WHERE username=:myUser";
-					$stmt = $pdo->prepare($sql);
-					$stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
-					$user = $stmt->fetch(PDO::FETCH_OBJ);
-					$dbuserhouseid = $user->homeid;
-					?>
+				<li id="info">Email: <?php echo $dbuseremail;?></li>
+				<li id="info">Phone number: <?php echo $dbuserphonenumber;?></li>
 				<li id="info">House ID: <?php echo $dbuserhouseid?></li>
 				<li id="info">Housing Address: 1083 Chicago Street</li>
 			</ul>
