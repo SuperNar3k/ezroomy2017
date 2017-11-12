@@ -37,7 +37,7 @@
             <input type="password" placeholder="Confirm Password" name="passwordConfirmLogIn" id="passwordConfirmLogIn" class="input">
         </label>
 
-        <a href="login.html" id="newAccount">have an account?</a>
+        <a href="login.php" id="newAccount">have an account?</a>
 
         <input type="submit" class="logButton">
         
