@@ -14,11 +14,11 @@
 
     <?php include "nav.php"; ?>
 
-    <form id="login" class="form" action="loginConfirm.php" method="post">
+    <form id="login" class="form" action="userprofile.php" method="post">
             <h2 class="logTitle">Log In</h2>
             <hr class="loghr">
+
         <label class="field">
-            
             <input type="text" placeholder="Username" name="usernameLogIn" id="usernameLogIn" class="input">
         </label>
         <label class="field">
