@@ -3,18 +3,6 @@ body {
 	padding: 0px;
 	margin:0px;
 }
-	height: 50px;
-	background-color: #393939;
-	display: flex;
-	align-self: center;
-	justify-content: space-around;
-	flex-flow: row nowrap;
-    box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
-}
-.icon{
-	transition:400ms;
-	height:50px;
-}
 #footer {
 	position: relative;
 	height: 50px;
