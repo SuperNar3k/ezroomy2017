@@ -14,13 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 </head>
 <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script> $(".dropdown-content li a").click(function(){
-
-             $(this).parents(".dropbtn").find('.dropdown').text($(this).text());
-             $(this).parents(".dropbtn").find('.dropdown').val($(this).text());
-
-             }); </script>
+    
     <?php include "nav.php"; ?>
     <div class="homeinfo">
         <img class="homeimage" src="images/homeprofilebackground.jpg">
@@ -34,16 +28,37 @@
             </tr>
             <tr>
                 <td>
-                    <div class="dropbtn">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                Option: <span class="dropdown">Option 1</span><span class="caret"></span>
-                </button>
-                <ul class="dropdown-content" role="menu">
-                <li><a href="#">Option 1</a></li>
-                <li><a href="#">Option 2</a></li>
-                <li><a href="#">Option 3</a></li>
-                </ul>
+                <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                  </div>
                 </div>
+                
+                <script>
+                /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+                
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function(event) {
+                  if (!event.target.matches('.dropbtn')) {
+                
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                      var openDropdown = dropdowns[i];
+                      if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                      }
+                    }
+                  }
+                }
+                </script>
                 </td>
                 <td>Util2</td>
                 <td>Util3</td>
@@ -65,6 +80,6 @@
             </tr>
     </table>
     </div>
-    <?php include "footer.php"; ?>
+    <?php include "footer.php"; ?>  
 </body>
 </html>
