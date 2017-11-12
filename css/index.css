@@ -12,7 +12,7 @@ body {
 	z-index: 5;
 	overflow: hidden;
 	position: relative;
-	height: 50px;
+	height: 100%;
 	width:100%;
 	background-color: #393939;
 	display: flex;
@@ -57,11 +57,10 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	color: rgb(0, 0, 0);
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 	margin-right: 10px;
 	flex-shrink:2;
 	flex-basis: 10px;
-	list-style: none;
 }
 .menus{
 	z-index: 1;
@@ -72,9 +71,6 @@ body {
 	color: rgb(255, 255, 255);
 	margin-top:10px;
 	text-decoration: none;
-}
-#bottomtext{
-	padding:5px;
 }
 #bottomtext:hover {
 	color:rgb(74, 202, 111);

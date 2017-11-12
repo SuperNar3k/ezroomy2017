@@ -20,7 +20,6 @@
 			<a id="bottomtext">Terms of Use</a>
 			<a id="bottomtext">Help</a>
 			<a id="bottomtext">Contact Us</a>
-			<a>©EzRoomy</a>
 		</div>
 	</body>
 </html>
