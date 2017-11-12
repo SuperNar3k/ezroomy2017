@@ -18,39 +18,68 @@
     <div class="homeinfo">
         <img class="homeimage" src="images/homeprofilebackground.jpg">
         <div id="hometitle">Home <a id="userlist">(<?php echo $_SESSION["Username"];?>)</a></div>
-
-        <table>
+        <table id="myTable">
             <tr>
                 <th id="header1">Bill</th>
                 <th id="header1">Date Due</th>
                 <th id="header1">Name</th>
                 <th id="header1">Cost</th>
+                <td><input type="button" class="button" value="+" onclick="addField();"></td>
             </tr>
             <tr>
-                <td>Rent</td>
-                <td>xx/xx/xx</td>
-                <td>Bob</td>
-                <td>$666</td>
+                <td> <input id="Bill"></td>
+            <td> <input id="DueDate"></td>
+            <td> <input id="Name"></td>
+            <td> <input id="Cost"></td>
             </tr>
             <tr>
-                <td>Electricity</td>
-                <td>xx/xx/xx</td>
-                <td>Griffin</td>
-                <td>$150</td>
-            </tr>
-            <tr>
-                <td>Water</td>
-                <td>xx/xx/xx</td>
-                <td>Swanson</td>
-                <td>$300</td>
-            </tr>
-            <tr>
-                <td>Internet</td>
-                <td>xx/xx/xx</td>
-                <td>Brown</td>
-                <td>$250</td>
+            <td><input type="button" class="button" value="+" onclick="submit();"></td>
             </tr>
     </table>
+<script>function addField (argument) {
+        var myTable = document.getElementById("myTable");
+        var currentIndex = myTable.rows.length;
+        var currentRow = myTable.insertRow(-1);
+
+        var linksBox = document.createElement("input");
+        linksBox.setAttribute("id", "Bill" + currentIndex);
+
+        var keywordsBox = document.createElement("input");
+        keywordsBox.setAttribute("id", "DueDate" + currentIndex);
+
+        var violationsBox = document.createElement("input");
+        violationsBox.setAttribute("id", "Name" + currentIndex);
+
+        var addRowBox = document.createElement("input");
+        addRowBox.setAttribute("id", "Cost" + currentIndex);
+
+        var currentCell = currentRow.insertCell(-1);
+        currentCell.appendChild(linksBox);
+
+        currentCell = currentRow.insertCell(-1);
+        currentCell.appendChild(keywordsBox);
+
+        currentCell = currentRow.insertCell(-1);
+        currentCell.appendChild(violationsBox);
+
+        currentCell = currentRow.insertCell(-1);
+        currentCell.appendChild(addRowBox);}
+
+        function addField (argument) {
+        var myTable = document.getElementById("myTable");
+        var currentIndexc = myTable.columns.length-1;
+        for (i = 0; i < currentIndexc; i++) {
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("Bill").value = data;
+    }</script>
+    <?php //collecting rows of emails with same email
+    $sql = "SELECT * FROM user WHERE email=:myEmail";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(["myEmail" => $useremail]); //order of arrays corresponds order of ?
+    $email = $stmt->fetch(PDO::FETCH_OBJ);
+    $rowCountemail = $stmt->rowCount();
+    ?>
     </div>
     <?php include "footer.php"; ?>  
 </body>
