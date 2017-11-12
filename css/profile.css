@@ -10,6 +10,7 @@
 	background-size: 100% 100%;
 }
 .imageProfile{
+	z-index: 0;
 	width:1000px;
 	height:667px;
 }
