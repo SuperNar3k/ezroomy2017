@@ -1,4 +1,5 @@
 <?php
+session_start();
 //----------
 //username needs to come from session
 //----------

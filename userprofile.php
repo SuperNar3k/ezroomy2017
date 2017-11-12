@@ -39,7 +39,8 @@ session_start();
         $dbpass = $user->password;
 
         if($username == $dbusername && $userpassword == $dbpass) { 
-            header("location: Profile.php");
+            $_SESSION["Username"] = $username;
+            header('Location: Profile.php'); 
             echo ("You've reached the point you should move to a different website");
         } else{
              echo "invalid username or password";
