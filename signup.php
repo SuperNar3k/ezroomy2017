@@ -40,7 +40,7 @@
             <input type="password" placeholder="Confirm Password*" name="passwordConfirmSignUp" id="passwordConfirmLogIn" class="input">
         </label>
 
-        <a href="login.php" id="newAccount">have an account?</a>
+        <a href="login.php" id="newAccount">Have an account?</a>
 
         <input type="submit" class="logButton" value="Sign Up">
         
