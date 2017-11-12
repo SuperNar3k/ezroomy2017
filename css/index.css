@@ -34,6 +34,7 @@ body {
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 	flex-grow: 1;
+	margin-left: 5px;
 }
 
 .name:hover{
@@ -45,6 +46,7 @@ body {
 .icon{
 	transition:400ms;
 	height:50px;
+	float:left;
 }
 #footer {
 	position: relative;
@@ -58,7 +60,6 @@ body {
 	align-items: center;
 	color: rgb(255, 255, 255);
 	flex-flow: row nowrap;
-	margin-right: 10px;
 	flex-shrink:2;
 	flex-basis: 10px;
 }
@@ -81,10 +82,15 @@ a{
     transition: 400ms;
 }
 .center {
-	z-index: 0;
 	position: relative;
-	float: left;
+	align-content: center;
+	justify-content: center;
 	height: 900px;
 	display: flex;
-	background-color: #ffffff;
+	background-image: transparent url("images/indexBar.jpg") no repeat center center;
+	background-color: 	#C7D290;
+}
+#startinfo{
+	color: white;
+	font-weight: bold;
 }

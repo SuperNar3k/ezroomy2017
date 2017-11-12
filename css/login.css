@@ -75,10 +75,9 @@ body {
     border: 0px;
     color: white;
 }
-.visible {
-
+#footer{
+    margin-top: 200px;
 }
-
 .logButton:hover {
     background: rgb(100, 248, 144);
     transform: translateY(-5px);
