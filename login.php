@@ -29,7 +29,7 @@
 
         <a href="signup.php" id="newAccount">Don't have an account?</a>
 
-        <input type="submit" class="logButton">
+        <input type="submit" class="logButton" value="Log In">
         
 </form>
 		 <?php include "footer.php";?>
