@@ -16,7 +16,7 @@ include "database.php";?>
  		<?php include 'nav.php';?>
  		<div class="centerinfo">
 			<img class=imageProfile src="images/userpage.png">
-		 <p>User Profile: <?php echo $_SESSION["Username"];?></p>
+		 <p id="info">User Profile: <?php echo $_SESSION["Username"];?></p>
 		 <?php
 		     //collecting user house id
 			 $sql = "SELECT * FROM user WHERE username=:myUser";
@@ -25,16 +25,9 @@ include "database.php";?>
 			 $user = $stmt->fetch(PDO::FETCH_OBJ);
 			 $dbuserhouseid = $user->homeid;
 			 ?>
-		 <p>House ID: <?php echo $dbuserhouseid?></p>
-		 <p>Housing Address: 1083 Chicago Street</p>
+		 <p id="info">House ID: <?php echo $dbuserhouseid?></p>
+		 <p id="info">Housing Address: 1083 Chicago Street</p>
 		 <?php include "footer.php";?>
 		 
 </body>
-			<p>User Profile: <?php echo $_SESSION["Username"];?></p>
-			<p>House ID: 19D0IB6P3MO</p>
-			<p>Housing Address: 1083 Chicago Street</p>
-		</div>
-		<?php include "footer.php";?> 
-	</body>
->>>>>>> 8061eb5481b359b0afa51537f4b030b5fa0fbb27
 </html>

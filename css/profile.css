@@ -14,3 +14,11 @@
 	width:1000px;
 	height:667px;
 }
+#info{
+	z-index: 2;
+	position: absolute;
+	color: rgb(0, 0, 0);
+	font-size: 10px;
+	align-self: center;
+	top: 20%;
+}
