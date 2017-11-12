@@ -10,22 +10,22 @@
 	</head>
 	<body>
 		<div id="header">
-            <img id="icon" src="icon/hiresweb.png" alt="Icon">
-			<a id="name" href="https://www.easybill.tech">EZROOMY</a>
+            <img class="icon" src="icon/hiresweb.png" alt="Icon">
+			<a class="name">EZROOMY</a>
 			<a class="menus"> Home Profile </a>
             <a class="menus"> User Profile </a>
             <a class="menus" href="login.php"> Sign-up/Log-in </a>
 		</div>
 		<div class="center"></div>
 		<div id="footer">
-		<a>About us</a>
-		<a>News</a>
-		<a>Feedback</a>
-		<a>FAQ</a>
-		<a>Privacy Policy</a>
-		<a>Terms of Use</a>
-		<a>Help</a>
-		<a>Contact Us</a>
+		<a id="bottomtext">About us</a>
+		<a id="bottomtext">News</a>
+		<a id="bottomtext">Feedback</a>
+		<a id="bottomtext">FAQ</a>
+		<a id="bottomtext">Privacy Policy</a>
+		<a id="bottomtext">Terms of Use</a>
+		<a id="bottomtext">Help</a>
+		<a id="bottomtext">Contact Us</a>
 		</div>
 	</body>
 </html>
