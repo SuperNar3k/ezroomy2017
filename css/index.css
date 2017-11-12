@@ -3,6 +3,11 @@ body {
 	padding: 0px;
 	margin:0px;
 }
+.menus:hover{
+	color:rgb(74, 202, 111);
+	transform: translateY(-2px);
+	transition: 400ms;
+}
 .header {
 	z-index: 5;
 	overflow: hidden;
@@ -17,7 +22,9 @@ body {
 	flex-basis: 10px;
     box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
 }
-
+.signinbutton{
+	text-decoration: none;
+}
 .name{
 	float:left;
     position:relative;
@@ -50,10 +57,11 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	color: rgb(0, 0, 0);
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	margin-right: 10px;
 	flex-shrink:2;
 	flex-basis: 10px;
+	list-style: none;
 }
 .menus{
 	z-index: 1;
@@ -64,6 +72,9 @@ body {
 	color: rgb(255, 255, 255);
 	margin-top:10px;
 	text-decoration: none;
+}
+#bottomtext{
+	padding:5px;
 }
 #bottomtext:hover {
 	color:rgb(74, 202, 111);
