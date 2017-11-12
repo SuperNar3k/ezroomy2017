@@ -16,7 +16,7 @@
 
     </nav>
 
-    <div id="login" class="form">
+    <form id="login" class="form" action="userprofile.php" method="post">
             <h2 class="logTitle">Log In</h2>
             <hr class="loghr">
         <label class="field">
@@ -28,14 +28,10 @@
             <input type="password" placeholder="Password" name="passwordLogIn" id="passwordLogIn" class="input">
         </label>
 
-        <label class="field visible">
-            <input type="password" placeholder="Confirm Password" id="passwordLogInConfirm" class="input ">
-        </label>
+        <a href="signup.html" id="newAccount">Don't have an account?</a>
 
-        <p id="newAccount">Don't have an account?</p>
-
-        <button class="logButton">Log In</button>
+        <input type="submit" class="logButton">
         
-    </div>
+</form>
 </body>
 </html>
