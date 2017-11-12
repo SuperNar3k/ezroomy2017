@@ -78,11 +78,7 @@ div{
 	z-index: 2;
 	position: absolute;
 	color: rgb(255, 255, 255);
-<<<<<<< HEAD
 	/* font-size: 60px; */
-=======
-	font-size: 60px;
->>>>>>> c5963e255b91a6820f4c0f4cbcc68e29053b41ad
 	top: 10%;
 	font-weight: bold;
 	align-content: top;
