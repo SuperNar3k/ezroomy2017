@@ -36,13 +36,13 @@
                 <td>
                     <div class="dropbtn">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                <span class="dropdown">Choose</span><span class="caret"></span>
+                    <span class="dropdown">Choose</span><span class="caret"></span>
                 </button>
-                <ul class="dropdown-content" role="menu">
-                <li><a href="#">Option 1</a></li>
-                <li><a href="#">Option 2</a></li>
-                <li><a href="#">Option 3</a></li>
-                </ul>
+                    <ul class="dropdown-content" role="menu">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                        <li><a href="#">Option 3</a></li>
+                    </ul>
                 </div>
                 </td>
                 <td>Util2</td>
