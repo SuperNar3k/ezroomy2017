@@ -17,7 +17,34 @@
 
     <?php include "nav.php"; ?>
     <div>
-
+        <table>
+    <tr>
+        <th>Bill</th>
+        <th>Date Due</th>
+        <th>Name</th>
+        <th>Cost</th>
+    </tr>
+    <tr>
+        <td>Util1</td>
+        <td>Util2</td>
+        <td>Util3</td>
+    </tr>
+    <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+        <td>$150</td>
+    </tr>
+    <tr>
+        <td>Joe</td>
+        <td>Swanson</td>
+        <td>$300</td>
+    </tr>
+    <tr>
+        <td>Cleveland</td>
+        <td>Brown</td>
+        <td>$250</td>
+    </tr>
+    </table>
     </div>
     <?php include "footer.php"; ?>
 </body>
