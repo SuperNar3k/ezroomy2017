@@ -12,11 +12,12 @@
 	</head>
 	<body>
  		<?php include 'nav.php';?>
- 		<div class="centerinfo"></div>
-		<img class=imageProfile src="images/userpage.png">
+ 		<div class="centerinfo">
+			<img class=imageProfile src="images/userpage.png">
 			<p>User Profile: <?php echo $_SESSION["Username"];?></p>
 			<p>House ID: 19D0IB6P3MO</p>
 			<p>Housing Address: 1083 Chicago Street</p>
+		</div>
 		<?php include "footer.php";?> 
 	</body>
 </html>
