@@ -32,5 +32,6 @@
         <input type="submit" class="logButton">
         
 </form>
+		 <?php include "footer.php";?>
 </body>
 </html>

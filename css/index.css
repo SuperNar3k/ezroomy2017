@@ -56,7 +56,7 @@ body {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
 	flex-flow: row nowrap;
 	margin-right: 10px;
 	flex-shrink:2;

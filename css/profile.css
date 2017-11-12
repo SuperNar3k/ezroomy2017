@@ -1,0 +1,8 @@
+.centerinfo {
+	z-index: 0;
+	position: relative;
+	float: left;
+	height: 900px;
+	display: flex;
+	background-color: #ffffff;
+}
