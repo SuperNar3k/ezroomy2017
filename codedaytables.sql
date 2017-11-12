@@ -49,7 +49,7 @@ CREATE TABLE `user` (
   `id` int(12) NOT NULL,
   `username` varchar(20) NOT NULL,
   `email` varchar(20) NOT NULL,
-  `phone number` varchar(20) NOT NULL,
+  `phonenumber` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
   `homeid` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
