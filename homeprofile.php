@@ -58,6 +58,9 @@
                 <td><input id = Cost4 type="number" ></td>
                 </form>
             </tr>
+            <tr>
+                <td><button id="savebutton">Save!</a></button></td>
+            </tr>
     </table>
     </div>
     <?php include "footer.php"; ?>  

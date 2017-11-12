@@ -1,19 +1,19 @@
-.dropbtn {
-    color: white;
-    font-size: 30px;
-    border: .2px solid;
-    cursor: pointer;
-}
-button{
+#savebutton{
     height:100%;
-    width:100%;
+    width:85%;
+    background-color: rgba(255, 255, 255, 0.281);
+    cursor: pointer;
+    border: .2px solid;
+    font-size: 20px;
+    padding: 10px;
 }
-#header1{
-    font-weight: bold;
-    background-color: #b1b1b13f;
+#savebutton:hover{
+    background-color:rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
 }
-tr:hover {
-    background-color: #b1b1b118
+td:hover,th:hover {
+    background-color: #b1b1b13d;
+    box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
 }
 body {
 	font-family: 'Lato', sans-serif;
