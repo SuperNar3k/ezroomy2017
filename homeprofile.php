@@ -18,7 +18,6 @@
     <div class="homeinfo">
         <img class="homeimage" src="images/homeprofilebackground.jpg">
         <div id="hometitle">Home</div>
-        <form>
         <table>
             <tr>
                 <th>Bill</th>
@@ -60,12 +59,7 @@
                 }
                 </script>
                 </td>
-                <td>
-                    <label class="field">
-     
-                        <input type="password" placeholder="Password" name="Date xx/xx/xx" id="passwordLogIn" class="input">
-                    </label>
-                </td>
+                <td>xx/xx/xx</td>
                 <td>Bob</td>
                 <td>$666</td>
             </tr>
@@ -88,8 +82,7 @@
                 <td>$250</td>
             </tr>
     </table>
-    </form>
     </div>
-    <?php include "footer.php"; ?> 
+    <?php include "footer.php"; ?>  
 </body>
 </html>
