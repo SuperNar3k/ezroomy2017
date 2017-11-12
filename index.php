@@ -11,8 +11,9 @@
 	<body>
 		<?php include "nav.php";?>
 		<div class="center">
-			<!-- <img class=imageIndex src="images/indexBar.jpg" alt="Split the Bill!"> -->
-			<a id="startinfo">Share the Bills with Your Roomies!</a>
+			<img class=imageIndex src="images/indexBar.jpg" alt="Split the Bill!">
+			<div id="startinfo">Share the Bills with Your Roomies!</div>
+			<button id="startbutton"><a href="login.php">Start Now!</a></button>
 		</div>
 		<?php include "footer.php";?>
 	</body>

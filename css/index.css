@@ -88,10 +88,29 @@ a{
 	height: 900px;
 	display: flex;
 	background-size: 100% 100%;
-	background-image: url("images/indexBar.jpg");
 	background-color: 	#C7D290;
 }
 #startinfo{
+	position: absolute;
 	color: white;
 	font-weight: bold;
+	font-size: 50px;
+	text-transform: uppercase;
+	align-content: center;
+	top: 20%;
+}
+#startbutton{
+	position: absolute;
+	background-color: rgb(195, 209, 112);
+	color:rgb(74, 202, 111);
+	font-size: 40px;
+	top: 30%;
+	transition: 400ms;
+}
+#startbuttontext{
+	text-decoration: none;
+}
+#startbutton:hover{
+	transition: 400ms;
+	transform: translateY(-5px);
 }
