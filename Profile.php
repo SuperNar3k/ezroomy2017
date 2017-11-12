@@ -14,6 +14,7 @@ include "database.php";?>
 	</head>
 	<body>
  		<?php include 'nav.php';?>
+<<<<<<< HEAD
  		<div class="centerinfo"></div>
 <<<<<<< HEAD
 		
@@ -33,9 +34,14 @@ include "database.php";?>
 </body>
 =======
 		<img class=imageProfile src="images/userpage.png">
+=======
+ 		<div class="centerinfo">
+			<img class=imageProfile src="images/userpage.png">
+>>>>>>> 14472dbdfbbb909bf79c4f23c0b63e5cac17f1ec
 			<p>User Profile: <?php echo $_SESSION["Username"];?></p>
 			<p>House ID: 19D0IB6P3MO</p>
 			<p>Housing Address: 1083 Chicago Street</p>
+		</div>
 		<?php include "footer.php";?> 
 	</body>
 >>>>>>> 8061eb5481b359b0afa51537f4b030b5fa0fbb27
