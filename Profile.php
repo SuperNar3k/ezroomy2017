@@ -15,6 +15,7 @@ include "database.php";?>
 	<body>
  		<?php include 'nav.php';?>
  		<div class="centerinfo"></div>
+<<<<<<< HEAD
 		
 		 <p>User Profile: <?php echo $_SESSION["Username"];?></p>
 		 <?php
@@ -30,4 +31,12 @@ include "database.php";?>
 		 <?php include "footer.php";?>
 		 
 </body>
+=======
+		<img class=imageProfile src="images/userpage.png">
+			<p>User Profile: <?php echo $_SESSION["Username"];?></p>
+			<p>House ID: 19D0IB6P3MO</p>
+			<p>Housing Address: 1083 Chicago Street</p>
+		<?php include "footer.php";?> 
+	</body>
+>>>>>>> 8061eb5481b359b0afa51537f4b030b5fa0fbb27
 </html>
