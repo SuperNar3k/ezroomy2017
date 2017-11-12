@@ -8,6 +8,11 @@ body {
 	position: relative;
 	height: 60px;
 	background-color: #393939;
+	display: flex;
+	align-self: center;
+	justify-content: space-around;
+	flex-flow: row nowrap;
+	flex-basis: 10px;
 }
 #icon{
 	transition:400ms;
@@ -30,6 +35,13 @@ img:hover{
 	align-items: center;
 	color: rgb(0, 0, 0);
 	flex-direction: row;
+	display: flex;
+	align-self: center;
+	justify-content: space-around;
+	flex-flow: row nowrap;
+	margin-right: 10px;
+	flex-shrink:2;
+	flex-basis: 10px;
 }
 #name{
 	float:left;
@@ -38,15 +50,17 @@ img:hover{
 	font-size: 30px;
 	color: rgb(255, 255, 255);
 	text-decoration: none;
+	flex-grow: 2;
 }
 .menus{
+	z-index: 1;
     position:relative;
-	float:right;
+	float:none;
 	margin-right: 20px;
 	font-weight:bold;
 	font-size: 15px;
 	color: rgb(0, 0, 0);
-    margin-top:10px;
+	margin-top:10px;
 }
 a:hover {
 	color:rgb(74, 202, 111);
