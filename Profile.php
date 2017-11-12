@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<?php session_start();?>
+<?php session_start();
+include "database.php";?>
+
 <html lang="en">
 <head>
    		<meta charset="UTF-8">
@@ -15,7 +17,15 @@
  		<div class="centerinfo"></div>
 		
 		 <p>User Profile: <?php echo $_SESSION["Username"];?></p>
-		 <p>House ID: 19D0IB6P3MO</p>
+		 <?php
+		     //collecting user house id
+			 $sql = "SELECT * FROM user WHERE username=:myUser";
+			 $stmt = $pdo->prepare($sql);
+			 $stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
+			 $user = $stmt->fetch(PDO::FETCH_OBJ);
+			 $dbuserhouseid = $user->homeid;
+			 ?>
+		 <p>House ID: <?php echo $dbuserhouseid?></p>
 		 <p>Housing Address: 1083 Chicago Street</p>
 		 <?php include "footer.php";?>
 		 
