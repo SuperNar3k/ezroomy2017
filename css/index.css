@@ -3,17 +3,12 @@ body {
 	padding: 0px;
 	margin:0px;
 }
-.header {
-	overflow: hidden;
-	position: fixed;
 	height: 50px;
-	width:100%;
 	background-color: #393939;
 	display: flex;
 	align-self: center;
 	justify-content: space-around;
 	flex-flow: row nowrap;
-	flex-basis: 10px;
     box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
 }
 .icon{
@@ -35,24 +30,6 @@ body {
 	margin-right: 10px;
 	flex-shrink:2;
 	flex-basis: 10px;
-}
-.name{
-	float:left;
-    position:relative;
-	font-weight:bold;
-	font-size: 40px;
-	color: rgb(255, 255, 255);
-	text-decoration: none;
-	flex-grow: 1;
-}
-.icon:hover{
-	transform: translateY(-2px);
-	transition: 400ms;
-}
-.name:hover{
-	color:rgb(74, 202, 111);
-	transform: translateY(-2px);
-	transition: 400ms;
 }
 .menus{
 	z-index: 1;
