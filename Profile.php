@@ -15,20 +15,24 @@ include "database.php";?>
 	<body>
  		<?php include 'nav.php';?>
  		<div class="centerinfo">
-			<img class=imageProfile src="images/userpage.png">
-		 <a id="info">User Profile: <?php echo $_SESSION["Username"];?></a>
-		 <?php
-		     //collecting user house id
-			 $sql = "SELECT * FROM user WHERE username=:myUser";
-			 $stmt = $pdo->prepare($sql);
-			 $stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
-			 $user = $stmt->fetch(PDO::FETCH_OBJ);
-			 $dbuserhouseid = $user->homeid;
-			 ?>
-			<a id="info">House ID: <?php echo $dbuserhouseid?></a>
-		 	<a id="info">Housing Address: 1083 Chicago Street</a>
+			<img class=imageProfile src="images/userpage.jpg">
+			<div id="userinfo"><?php echo $_SESSION["Username"];?>'s Profile</div>
+			
+			<ul>
+				<li id="info">User Profile: <?php echo $_SESSION["Username"];?></li>
+				<?php
+					//collecting user house id
+					$sql = "SELECT * FROM user WHERE username=:myUser";
+					$stmt = $pdo->prepare($sql);
+					$stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
+					$user = $stmt->fetch(PDO::FETCH_OBJ);
+					$dbuserhouseid = $user->homeid;
+					?>
+				<li id="info">House ID: <?php echo $dbuserhouseid?></li>
+				<li id="info">Housing Address: 1083 Chicago Street</li>
+			</ul>
 		</div>
-		 <?php include "footer.php";?>
+		<?php include "footer.php";?>
 		 
-</body>
+	</body>
 </html>
