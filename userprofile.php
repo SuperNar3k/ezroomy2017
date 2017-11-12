@@ -47,3 +47,10 @@
     <?php } else { echo "invalid username or password";}}//end of if statements?>
         
 
+		<div class="header">
+            <img class="icon" src="icon/hiresweb.png" alt="Icon">
+			<a class="name">EZROOMY</a>
+			<button class="homeprflbutton">Home Profile<i class="fa fa-caret-down"></i></button>
+            <button class="userprflbutton">User Profile<i class="fa fa-caret-down"></i></button>
+            <a class="menus" href="login.php"> Sign-up/Log-in </a>
+		</div>
