@@ -21,24 +21,24 @@
             <hr class="loghr">
 
         <label class="field">
-            <input type="text" placeholder="Username" name="usernameSignUp" id="usernameSignUp" class="input">
+            <input type="text" placeholder="Username*" name="usernameSignUp" id="usernameSignUp" class="input">
         </label>
  
         <label class="field">
-            <input type="text" placeholder="Email" name="emailSignUp" id="emailSignUp" class="input">
+            <input type="text" placeholder="Email*" name="emailSignUp" id="emailSignUp" class="input">
         </label>        
 
         <label class="field">
-            <input type="text" placeholder="Phone Number" name="phoneSignUp" id="phoneSignUp" class="input">
+            <input type="text" placeholder="Phone Number*" name="phoneSignUp" id="phoneSignUp" class="input">
         </label>  
 
         <label class="field">     
-            <input type="password" placeholder="Password" name="passwordSignUp" id="passwordSignUp" class="input">
+            <input type="password" placeholder="Password*" name="passwordSignUp" id="passwordSignUp" class="input">
         </label>
 
         <label class="field">
             
-            <input type="password" placeholder="Confirm Password" name="passwordConfirmSignUp" id="passwordConfirmLogIn" class="input">
+            <input type="password" placeholder="Confirm Password*" name="passwordConfirmSignUp" id="passwordConfirmLogIn" class="input">
         </label>
 
         <a href="login.php" id="newAccount">have an account?</a>
