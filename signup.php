@@ -43,7 +43,7 @@
 
         <a href="login.php" id="newAccount">have an account?</a>
 
-        <input type="submit" class="logButton">
+        <input type="submit" class="logButton" value="Sign Up">
         
 </form>
 </body>
