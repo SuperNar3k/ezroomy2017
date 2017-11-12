@@ -2,24 +2,48 @@
 //----------
 //username needs to come from session
 //----------
-    if(isset($_POST["usernameLogIn"])) {
-        $username = $_POST["usernameLogIn"];
-    } else if(isset($_POST["passwordLogIn"])) {
-        $password = $_POST["passwordLogIn"];
+    if(isset($_POST["username"])) {
+        $username = $_POST["username"];
+       
+    } 
+    if(isset($_POST["password"])) {
+
+        $userpassword = $_POST["password"];
+ 
     }
    
-    echo $username . " THIS IS FROM FORM";
+    
 
     include "database.php";
+
+    // $sql = "SELECT * FROM user WHERE username=:myUser";
+    // $stmt = $pdo->prepare($sql);
+    // $stmt->execute(["myUser" => $username]); //order of arrays corresponds order of ?
+    // $rows = $stmt->fetchAll(PDO::FETCH_OBJ);
 
     $sql = "SELECT * FROM user WHERE username=:myUser";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(["myUser" => $username]); //order of arrays corresponds order of ?
-    $rows = $stmt->fetchAll(PDO::FETCH_OBJ);
+    $user = $stmt->fetch(PDO::FETCH_OBJ);
 
-     foreach($rows as $row) { 
-        ?>
-            <p><?=$row->username?> tel: <?=$row->password?></p>
+    $rowCount = $stmt->rowCount();
+    //welcome to the hack
+    if ($rowCount != 1) { 
 
-        <?php } ?>
+        echo "invalid username or password";
+
+    } else if($rowCount==1){ //iif only 1 user returned
+        //grab info from db
+        $dbusername = $user->username;
+        $dbpass = $user->password;
+
+        if($username == $dbusername && $userpassword == $dbpass) { //if logged in
+            //create a session
+            
+    ?>
+            <h3>Welcome <?=$user->username?></h3>
+
+
+    <?php } else { echo "invalid username or password";}}//end of if statements?>
+        
 

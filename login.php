@@ -19,11 +19,11 @@
             <hr class="loghr">
 
         <label class="field">
-            <input type="text" placeholder="Username" name="usernameLogIn" id="usernameLogIn" class="input">
+            <input type="text" placeholder="Username" name="username" id="usernameLogIn" class="input">
         </label>
         <label class="field">
      
-            <input type="password" placeholder="Password" name="passwordLogIn" id="passwordLogIn" class="input">
+            <input type="password" placeholder="Password" name="password" id="passwordLogIn" class="input">
         </label>
 
         <a href="signup.php" id="newAccount">Don't have an account?</a>
