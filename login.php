@@ -12,9 +12,7 @@
 </head>
 <body>
 
-    <nav id="navBar">
-
-    </nav>
+    <?php include "nav.php"; ?>
 
     <form id="login" class="form" action="userprofile.php" method="post">
             <h2 class="logTitle">Log In</h2>
