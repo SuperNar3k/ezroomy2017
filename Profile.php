@@ -19,7 +19,7 @@ include "database.php";?>
 			<div id="userinfo"><?php echo $_SESSION["Username"];?>'s Profile</div>
 			
 			<ul>
-				<li id="info">User Profile: <?php echo $_SESSION["Username"];?></li>
+				<li id="info">Username: <?php echo $_SESSION["Username"];?></li>
 				<?php
 					//collecting user house id
 					$sql = "SELECT * FROM user WHERE username=:myUser";
