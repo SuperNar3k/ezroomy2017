@@ -12,20 +12,13 @@
     <script src="js/jquery.js"></script>
     <script src="js/form.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-    <title>Your Home</title>
 </head>
 <body>
 
     <?php include "nav.php"; ?>
-
-    <!-- <h1>Cool</h1> -->
-
-    <div id="topbar">
+    <div>
 
     </div>
-
-    <div id="topbar">
-
-    </div>
+    <?php include "footer.php"; ?>
 </body>
 </html>
