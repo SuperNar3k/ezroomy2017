@@ -41,3 +41,50 @@
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+body {
+	font-family: 'Lato', sans-serif;
+	padding: 0px;
+	margin:0px;
+}
+.homeinfo {
+	position: relative;
+	height: 900px;
+	display: flex;
+	background-color: #856B52;
+}
+.homeimage{
+	z-index: 0;
+	width:100%;
+	height:100%;
+}
+#hometitle{
+	text-decoration:underline;
+}
+table{
+    z-index: 2;
+	position: absolute;
+	color: rgb(255, 255, 255);
+	font-size: 10px;
+	top: 30%;
+	align-content: top;
+	justify-content: space-around;
+	align-items: stretch;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-transform: capitalize;
+}
+div{
+	z-index: 2;
+	position: absolute;
+	color: rgb(255, 255, 255);
+	font-size: 60px;
+	top: 10%;
+	font-weight: bold;
+	align-content: top;
+	justify-content: space-around;
+	align-items: stretch;
+	background-size: 100% 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-transform: capitalize;
+}

@@ -22,45 +22,47 @@
 
              }); </script>
     <?php include "nav.php"; ?>
-    <div>
+    <div class="homeinfo">
+        <img class="homeimage" src="images/homeprofilebackground.jpg">
+        <div id="hometitle">Home</div>
         <table>
-    <tr>
-        <th>Bill</th>
-        <th>Date Due</th>
-        <th>Name</th>
-        <th>Cost</th>
-    </tr>
-    <tr>
-        <td>
-            <div class="dropbtn">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            Option: <span class="dropdown">Option 1</span><span class="caret"></span>
-            </button>
-            <ul class="dropdown-content" role="menu">
-            <li><a href="#">Option 1</a></li>
-            <li><a href="#">Option 2</a></li>
-            <li><a href="#">Option 3</a></li>
-            </ul>
-            </div>
-        </td>
-        <td>Util2</td>
-        <td>Util3</td>
-    </tr>
-    <tr>
-        <td>Lois</td>
-        <td>Griffin</td>
-        <td>$150</td>
-    </tr>
-    <tr>
-        <td>Joe</td>
-        <td>Swanson</td>
-        <td>$300</td>
-    </tr>
-    <tr>
-        <td>Cleveland</td>
-        <td>Brown</td>
-        <td>$250</td>
-    </tr>
+            <tr>
+                <th>Bill</th>
+                <th>Date Due</th>
+                <th>Name</th>
+                <th>Cost</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="dropbtn">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                Option: <span class="dropdown">Option 1</span><span class="caret"></span>
+                </button>
+                <ul class="dropdown-content" role="menu">
+                <li><a href="#">Option 1</a></li>
+                <li><a href="#">Option 2</a></li>
+                <li><a href="#">Option 3</a></li>
+                </ul>
+                </div>
+                </td>
+                <td>Util2</td>
+                <td>Util3</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+                <td>$150</td>
+            </tr>
+            <tr>
+                <td>Joe</td>
+                <td>Swanson</td>
+                <td>$300</td>
+            </tr>
+            <tr>
+                <td>Cleveland</td>
+                <td>Brown</td>
+                <td>$250</td>
+            </tr>
     </table>
     </div>
     <?php include "footer.php"; ?>
