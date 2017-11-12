@@ -85,6 +85,5 @@
         $sql = "INSERT INTO `user`(`username`, `email`, `phonenumber`, `password`) VALUES (:name, :email,:phone, :pass)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(["name" => $username, "email" => $useremail, "phone" => $userphone, "pass" => $userpassword]);
-        echo "WORK PLS WORK";
     }
     ?>

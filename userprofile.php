@@ -1,4 +1,5 @@
 <?php
+session_start();
 //----------
 //username needs to come from session
 //----------
@@ -32,25 +33,25 @@
 
         echo "invalid username or password";
 
-    } else if($rowCount==1){ //iif only 1 user returned
+    } else if($rowCount==1){ //if only 1 user returned
         //grab info from db
         $dbusername = $user->username;
         $dbpass = $user->password;
 
-        if($username == $dbusername && $userpassword == $dbpass) { //if logged in
-            //create a session
-            
-    ?>
-            <h3>Welcome <?=$user->username?></h3>
-
-
-    <?php } else { echo "invalid username or password";}}//end of if statements?>
+        if($username == $dbusername && $userpassword == $dbpass) { 
+            header("location: Profile.php");
+            echo ("You've reached the point you should move to a different website");
+        } else{
+             echo "invalid username or password";
+        }
+    }
+     ?>
         
 
-		<div class="header">
+		<!-- <div class="header">
             <img class="icon" src="icon/hiresweb.png" alt="Icon">
 			<a class="name">EZROOMY</a>
 			<button class="homeprflbutton">Home Profile<i class="fa fa-caret-down"></i></button>
             <button class="userprflbutton">User Profile<i class="fa fa-caret-down"></i></button>
             <a class="menus" href="login.php"> Sign-up/Log-in </a>
-		</div>
+		</div> -->
