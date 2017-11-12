@@ -3,6 +3,26 @@ body {
 	padding: 0px;
 	margin:0px;
 }
+<<<<<<< HEAD
+=======
+.header {
+	overflow: hidden;
+	/* position: fixed; */
+	height: 50px;
+	width:100%;
+	background-color: #393939;
+	display: flex;
+	align-self: center;
+	justify-content: space-around;
+	flex-flow: row nowrap;
+	flex-basis: 10px;
+    box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
+}
+.icon{
+	transition:400ms;
+	height:50px;
+}
+>>>>>>> a6bcfeca9d8b158f031838e3c6daa9f64f6bfd49
 #footer {
 	position: relative;
 	height: 50px;
