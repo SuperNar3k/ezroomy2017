@@ -14,7 +14,7 @@
 		<div class="center">
 			<img class=imageIndex src="images/indexBar.jpg" alt="Split the Bill!">
 			<div id="startinfo">Share the Bills with Your Roomies!</div>
-			<button id="startbutton"><a href="login.php">Start Now!</a></button>
+			<button id="startbutton"><a href="login.php" id="startbuttontext">Start Now!</a></button>
 		</div>
 		<?php include "footer.php";?>
 	</body>

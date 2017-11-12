@@ -102,15 +102,21 @@ a{
 #startbutton{
 	position: absolute;
 	background-color: rgb(195, 209, 112);
-	color:rgb(74, 202, 111);
 	font-size: 40px;
 	top: 30%;
 	transition: 400ms;
+	border: .5px solid;
+	border-radius: 10px;
 }
 a{
 	text-decoration: none;
 }
+#startbuttontext{
+	color:rgb(0, 0, 0);
+}
 #startbutton:hover{
 	transition: 400ms;
+	border-radius: 15px;
 	transform: translateY(-5px);
+    box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.50);
 }
