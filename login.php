@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/form.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <title>Log In</title>
 </head>
@@ -26,12 +28,14 @@
             <input type="password" placeholder="Password" name="passwordLogIn" id="passwordLogIn" class="input">
         </label>
 
-        <p id="newAccount">dont have an account?</p>
+        <label class="field visible">
+            <input type="password" placeholder="Confirm Password" id="passwordLogInConfirm" class="input ">
+        </label>
+
+        <p id="newAccount">Don't have an account?</p>
 
         <button class="logButton">Log In</button>
         
     </div>
-
-
 </body>
 </html>

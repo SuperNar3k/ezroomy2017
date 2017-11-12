@@ -13,6 +13,7 @@ body {
 
 /* Log In / Sign Up */
 .logTitle {
+    color: #393939;
     font-size: 30px;
     margin: 10px;
     text-transform: uppercase;
@@ -21,6 +22,7 @@ body {
 .loghr {
     border: 1px solid grey;
     margin-bottom: 35px;
+    width: 70%;
 }
 
 .form {
@@ -45,7 +47,7 @@ body {
     outline: none;
     border: 0px;
     border: 1px solid rgba(0,0,0,0.18);
-    padding: 10px 0px 0px 5px;
+    padding: 10px 0px 5px 5px;
 }
 
 #newAccount {
@@ -53,10 +55,10 @@ body {
     font-size: 12px;
     display: block;
     color: rgb(0, 105, 218);
+    cursor: pointer;
 }
 
 #newAccount:hover {
-    
     color: rgb(37, 139, 255);
 }
 
@@ -72,6 +74,9 @@ body {
     border-radius: 2px;
     border: 0px;
     color: white;
+}
+.visible {
+
 }
 
 .logButton:hover {
