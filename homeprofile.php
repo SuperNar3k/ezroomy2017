@@ -18,68 +18,47 @@
     <div class="homeinfo">
         <img class="homeimage" src="images/homeprofilebackground.jpg">
         <div id="hometitle">Home <a id="userlist">(<?php echo $_SESSION["Username"];?>)</a></div>
-        <table id="myTable">
+
+        <table>
             <tr>
                 <th id="header1">Bill</th>
                 <th id="header1">Date Due</th>
                 <th id="header1">Name</th>
                 <th id="header1">Cost</th>
-                <td><input type="button" class="button" value="+" onclick="addField();"></td>
             </tr>
             <tr>
-                <td> <input id="Bill"></td>
-            <td> <input id="DueDate"></td>
-            <td> <input id="Name"></td>
-            <td> <input id="Cost"></td>
+                <form action= "homebuilder.php">
+                <td><input id = Rent type="text"></td>
+                <td><input id = DueDate type="text"></td>
+                <td><input id = Name type="text"></td>
+                <td><input id = Cost type="number" ></td>
+                </form>
             </tr>
             <tr>
-            <td><input type="button" class="button" value="+" onclick="submit();"></td>
+                <form>
+                <td><input id = Rent2 type="text"></td>
+                <td><input id = DueDate2 type="text"></td>
+                <td><input id = Name2 type="text"></td>
+                <td><input id = Cost2 type="number" ></td>
+                </form>
+            </tr>
+            <tr>
+                <form>
+                <td><input id = Rent3 type="text"></td>
+                <td><input id = DueDate3 type="text"></td>
+                <td><input id = Name3 type="text"></td>
+                <td><input id = Cost3 type="number" ></td>
+                </form>
+            </tr>
+            <tr>
+                <form>
+                <td><input id = Rent4 type="text"></td>
+                <td><input id = DueDate4 type="text"></td>
+                <td><input id = Name4 type="text"></td>
+                <td><input id = Cost4 type="number" ></td>
+                </form>
             </tr>
     </table>
-<script>function addField (argument) {
-        var myTable = document.getElementById("myTable");
-        var currentIndex = myTable.rows.length;
-        var currentRow = myTable.insertRow(-1);
-
-        var linksBox = document.createElement("input");
-        linksBox.setAttribute("id", "Bill" + currentIndex);
-
-        var keywordsBox = document.createElement("input");
-        keywordsBox.setAttribute("id", "DueDate" + currentIndex);
-
-        var violationsBox = document.createElement("input");
-        violationsBox.setAttribute("id", "Name" + currentIndex);
-
-        var addRowBox = document.createElement("input");
-        addRowBox.setAttribute("id", "Cost" + currentIndex);
-
-        var currentCell = currentRow.insertCell(-1);
-        currentCell.appendChild(linksBox);
-
-        currentCell = currentRow.insertCell(-1);
-        currentCell.appendChild(keywordsBox);
-
-        currentCell = currentRow.insertCell(-1);
-        currentCell.appendChild(violationsBox);
-
-        currentCell = currentRow.insertCell(-1);
-        currentCell.appendChild(addRowBox);}
-
-        function addField (argument) {
-        var myTable = document.getElementById("myTable");
-        var currentIndexc = myTable.columns.length-1;
-        for (i = 0; i < currentIndexc; i++) {
-            text += "The number is " + i + "<br>";
-        }
-        document.getElementById("Bill").value = data;
-    }</script>
-    <?php //collecting rows of emails with same email
-    $sql = "SELECT * FROM user WHERE email=:myEmail";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(["myEmail" => $useremail]); //order of arrays corresponds order of ?
-    $email = $stmt->fetch(PDO::FETCH_OBJ);
-    $rowCountemail = $stmt->rowCount();
-    ?>
     </div>
     <?php include "footer.php"; ?>  
 </body>
