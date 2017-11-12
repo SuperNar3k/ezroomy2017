@@ -60,21 +60,25 @@
                 }
                 </script>
                 </td>
-                <td>Util2</td>
-                <td>Util3</td>
+                <td>xx/xx/xx</td>
+                <td>Bob</td>
+                <td>$666</td>
             </tr>
             <tr>
                 <td>Lois</td>
+                <td>xx/xx/xx</td>
                 <td>Griffin</td>
                 <td>$150</td>
             </tr>
             <tr>
                 <td>Joe</td>
+                <td>xx/xx/xx</td>
                 <td>Swanson</td>
                 <td>$300</td>
             </tr>
             <tr>
                 <td>Cleveland</td>
+                <td>xx/xx/xx</td>
                 <td>Brown</td>
                 <td>$250</td>
             </tr>

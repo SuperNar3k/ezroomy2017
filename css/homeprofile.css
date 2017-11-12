@@ -69,6 +69,7 @@ table{
 }
 th, td {
     border-bottom: 1px solid rgba(221, 221, 221, 0.301);
+    border-right: 1px solid rgba(221, 221, 221, 0.301);
     padding: 10px;
 }
 div{
