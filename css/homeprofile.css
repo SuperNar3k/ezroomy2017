@@ -24,7 +24,7 @@ tr:hover {background-color: #b1b1b12d}
 /* Links inside the dropdown */
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 0px 0px;
     text-decoration: none;
     display: block;
 }
@@ -76,6 +76,21 @@ div{
 	position: absolute;
 	color: rgb(255, 255, 255);
 	font-size: 60px;
+	top: 10%;
+	font-weight: bold;
+	align-content: top;
+	justify-content: space-around;
+	align-items: stretch;
+	background-size: 100% 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-transform: capitalize;
+}
+li{
+	z-index: 2;
+	position: absolute;
+	color: rgb(255, 255, 255);
+	font-size: 16px;
 	top: 10%;
 	font-weight: bold;
 	align-content: top;
