@@ -27,9 +27,6 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `home`
 --
-DROP Database `test2`;
-DROP Database `ezroomy`;
-CREATE Database 'ezroomy';
 
 CREATE TABLE `home` (
   `id` int(12) NOT NULL,
