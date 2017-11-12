@@ -16,25 +16,29 @@
 
     </nav>
 
-    <form id="login" class="form" action="userprofile.php" method="post">
+    <form id="signup" class="form" action="userprofile.php" method="post">
             <h2 class="logTitle">Log In</h2>
             <hr class="loghr">
 
         <label class="field">
-            <input type="text" placeholder="Username" name="usernameLogIn" id="usernameLogIn" class="input">
+            <input type="text" placeholder="Username" name="usernameSignUp" id="usernameSignUp" class="input">
         </label>
  
         <label class="field">
-            <input type="text" placeholder="Email" name="emailLogIn" id="emailLogIn" class="input">
+            <input type="text" placeholder="Email" name="emailSignUp" id="emailSignUp" class="input">
         </label>        
 
+        <label class="field">
+            <input type="text" placeholder="Phone Number" name="phoneSignUp" id="phoneSignUp" class="input">
+        </label>  
+
         <label class="field">     
-            <input type="password" placeholder="Password" name="passwordLogIn" id="passwordLogIn" class="input">
+            <input type="password" placeholder="Password" name="passwordSignUp" id="passwordSignUp" class="input">
         </label>
 
         <label class="field">
             
-            <input type="password" placeholder="Confirm Password" name="passwordConfirmLogIn" id="passwordConfirmLogIn" class="input">
+            <input type="password" placeholder="Confirm Password" name="passwordConfirmSignUp" id="passwordConfirmLogIn" class="input">
         </label>
 
         <a href="login.php" id="newAccount">have an account?</a>
