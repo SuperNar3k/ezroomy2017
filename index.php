@@ -9,13 +9,7 @@
 		<title></title>
 	</head>
 	<body>
-		<div id="header">
-            <img class="icon" src="icon/hiresweb.png" alt="Icon">
-			<a class="name">EZROOMY</a>
-			<a class="menus"> Home Profile </a>
-            <a class="menus"> User Profile </a>
-            <a class="menus" href="login.php"> Sign-up/Log-in </a>
-		</div>
+		<?php include "nav.php";?>
 		<div class="center"></div>
 		<div id="footer">
 		<a id="bottomtext">About us</a>
