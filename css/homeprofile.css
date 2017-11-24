@@ -1,0 +1,84 @@
+#savebutton{
+    height:100%;
+    width:85%;
+    background-color: rgba(255, 255, 255, 0.281);
+    cursor: pointer;
+    border: .2px solid;
+    font-size: 20px;
+    padding: 10px;
+}
+#savebutton:hover{
+    background-color:rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
+}
+td:hover,th:hover {
+    background-color: #b1b1b13d;
+    box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
+}
+body {
+	font-family: 'Lato', sans-serif;
+	padding: 0px;
+	margin:0px;
+}
+.homeinfo {
+	position: relative;
+	height: 900px;
+	display: flex;
+}
+.homeimage{
+	z-index: 0;
+	width:100%;
+	height:100%;
+}
+#hometitle{
+	text-decoration:underline;
+}
+table{
+    z-index: 2;
+	position: absolute;
+	color: rgb(255, 255, 255);
+    font-size: 30px;
+    border-collapse: collapse;
+    top: 30%;
+    width:66.60%;
+	align-content: top;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-transform: capitalize;
+}
+th, td {
+    border-bottom: 1px solid rgba(221, 221, 221, 0.301);
+    border-right: 1px solid rgba(221, 221, 221, 0.301);
+    border-left: 1px solid rgba(221, 221, 221, 0.301);
+    border-top: 1px solid rgba(221, 221, 221, 0.301);
+    padding: 10px;
+}
+div{
+	z-index: 2;
+	position: absolute;
+	color: rgb(255, 255, 255);
+	font-size: 60px;
+	top: 10%;
+	align-content: top;
+	justify-content: space-around;
+	align-items: stretch;
+	background-size: 100% 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-transform: capitalize;
+}
+#userlist{
+	z-index: 2;
+	position: absolute;
+	color: rgba(197, 197, 197, 0.767);
+	font-size: 20px;
+    top: 60%;
+    left:180px;
+    text-decoration: underline;
+    display: flex;
+	text-transform: capitalize;
+	justify-content: center;
+	align-items: stretch;
+	background-size: 100% 100%;
+}
