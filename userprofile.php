@@ -19,21 +19,21 @@ include "database.php";?>
 		<link type="text/css" rel="stylesheet" href="css/index.css"/>
 		<link type="text/css" rel="stylesheet" href="css/userprofile.css"/>
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-		<title></title>
 	</head>
 	<body>
-		 <?php include 'nav.php';?>
- 		<div class="centerinfo">
-			<div class="userProfileTitle"><?php echo $_SESSION["Username"];?>'s Profile<hr class="userProfile"></hr></div>
-			<ul>
-				<li id="info">Username: <?php echo $_SESSION["Username"];?></li>
-				<li id="info">Email: <?php echo $dbuseremail;?></li>
-				<li id="info">Phone number: <?php echo $dbuserphonenumber;?></li>
-				<li id="info">House ID: <?php echo $dbuserhouseid?></li>
-				<li id="info">Housing Address: 1083 Chicago Street</li>
-			</ul>
+		<div id="container">
+			<?php include 'nav.php';?>
+				<div class="body">
+					<div class="userProfileTitle"><?php echo $_SESSION["Username"];?>'s Profile<hr class="userProfile"></hr></div>
+					<ul>
+						<li id="info">Username: <?php echo $_SESSION["Username"];?></li>
+						<li id="info">Email: <?php echo $dbuseremail;?></li>
+						<li id="info">Phone number: <?php echo $dbuserphonenumber;?></li>
+						<li id="info">House ID: <?php echo $dbuserhouseid?></li>
+						<li id="info">Housing Address: 1083 Chicago Street</li>
+					</ul>
+				</div>
+			<?php include "footer.php";?>
 		</div>
-		<?php include "footer.php";?>
-		 
 	</body>
 </html>

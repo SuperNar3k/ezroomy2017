@@ -10,12 +10,14 @@
 		<title></title>
 	</head>
 	<body>
-		<?php include "nav.php";?>
-		<div class="center">
-			<img class=imageIndex src="images/indexBar.jpg" alt="Split the Bill!">
-			<div id="startinfo">Split the Bills with Your Roomies!</div>
-			<button id="startbutton"><a href="login.php" id="startbuttontext">Start Now!</a></button>
+		<div id = "container">
+			<?php include "nav.php";?>
+				<div class="body" style="background-color:#C7D290;height: 900px;">
+					<img class=imageIndex src="images/indexBar.jpg" alt="Split the Bill!">
+					<div id="startinfo">Split the Bills with Your Roomies!</div>
+					<button id="startbutton"><a href="login.php" id="startbuttontext">Start Now!</a></button>
+				</div>
+			<?php include "footer.php";?>
 		</div>
-		<?php include "footer.php";?>
 	</body>
 </html>

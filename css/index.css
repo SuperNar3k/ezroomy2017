@@ -1,26 +1,68 @@
+html,
 body {
-	font-family: 'Lato', sans-serif;
-	padding: 0px;
-	margin:0px;
+   margin:0;
+   padding:0;
+   height:100%;
+   font-family: 'Lato', sans-serif;
+}
+#container {
+   min-height:100%;
+   position:relative;
+   margin:0;
+   padding:0;
+}
+.header {
+   padding:10px;
+   margin:0;
+   padding:0;
+   z-index: 5;
+   overflow: hidden;
+   position: relative;
+   height: 100%;
+   width:100%;
+   background-color: #393939;
+   display: flex;
+   align-self: center;
+   justify-content: space-around;
+   flex-flow: row nowrap;
+   flex-basis: 10px;
+   box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
+}
+.body {
+   padding-bottom:50px;   /* Height of the footer */
+   margin:0;
+   padding:0;
+   position: relative;
+   align-content: center;
+   justify-content: center;
+   display: flex;
+   background-size: 100% 100%;
+}
+#imageIndex{
+	height: 100%;
+	width: 100%;
+}
+#footer {
+	bottom: 0;
+   position:absolute;
+   width:100%;
+   height: 50px;
+   background-color: #393939;
+   font-weight: bold;
+   clear: both;
+   font-size: 18px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   color: rgb(255, 255, 255);
+   flex-flow: row nowrap;
+   flex-shrink:2;
+   flex-basis: 10px;
 }
 .menus:hover{
 	color:rgb(74, 202, 111);
 	transform: translateY(-2px);
 	transition: 400ms;
-}
-.header {
-	z-index: 5;
-	overflow: hidden;
-	position: relative;
-	height: 100%;
-	width:100%;
-	background-color: #393939;
-	display: flex;
-	align-self: center;
-	justify-content: space-around;
-	flex-flow: row nowrap;
-	flex-basis: 10px;
-    box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
 }
 .signinbutton{
 	text-decoration: none;
@@ -47,21 +89,6 @@ body {
 	transition:400ms;
 	height:50px;
 	float:left;
-}
-#footer {
-	position: relative;
-	height: 50px;
-	background-color: #393939;
-	font-weight: bold;
-	clear: both;
-	font-size: 18px;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	color: rgb(255, 255, 255);
-	flex-flow: row nowrap;
-	flex-shrink:2;
-	flex-basis: 10px;
 }
 .menus{
 	z-index: 1;

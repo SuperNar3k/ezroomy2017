@@ -2,7 +2,6 @@ body {
     font-family: 'Lato', sans-serif;
     padding: 0px;
     margin: 0px;
-    height: 100vh;
 }
 
 /* NavBar */
@@ -75,12 +74,6 @@ body {
     border-radius: 2px;
     border: 0px;
     color: white;
-}
-#login{
-    margin-bottom: 100px;
-}
-#footer{
-    margin-top: 100px;
 }
 .logButton:hover {
     background: rgb(100, 248, 144);

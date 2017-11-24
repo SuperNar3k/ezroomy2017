@@ -49,7 +49,7 @@ th, td {
     border-top: 1px solid rgba(221, 221, 221, 0.301);
     padding: 10px;
 }
-div{
+/* div{
 	z-index: 2;
 	position: absolute;
 	color: rgb(255, 255, 255);
@@ -62,7 +62,7 @@ div{
 	flex-direction: row;
 	flex-wrap: wrap;
 	text-transform: capitalize;
-}
+} */
 #userlist{
 	z-index: 2;
 	position: absolute;

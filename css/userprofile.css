@@ -40,7 +40,7 @@ body {
     margin-bottom: 35px;
     width: 70%;
 }
-div{
+/* div{
 	z-index: 2;
 	position: absolute;
 	color: rgb(255, 255, 255);
@@ -54,7 +54,7 @@ div{
 	flex-direction: row;
 	flex-wrap: wrap;
 	text-transform: capitalize;
-}
+} */
 ul{
 	
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
