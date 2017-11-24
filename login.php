@@ -14,8 +14,7 @@
 <body>
 
     <?php include "nav.php"; ?>
-
-    <form id="login" class="form" action="userprofile.php" method="post">
+    <form id="login" class="form" action="session.php" method="post">
             <h2 class="logTitle">Log In</h2>
             <hr class="loghr">
 
@@ -32,6 +31,6 @@
         <input type="submit" class="logButton" value="Log In">
         
 </form>
-		 <?php include "footer.php";?>
+         <?php include "footer.php";?>
 </body>
 </html>

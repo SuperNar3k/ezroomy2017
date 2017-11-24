@@ -2,6 +2,7 @@ body {
     font-family: 'Lato', sans-serif;
     padding: 0px;
     margin: 0px;
+    height: 100vh;
 }
 
 /* NavBar */
@@ -9,20 +10,20 @@ body {
     height: 50px;
     background-color: #393939;
 }
-
-
 /* Log In / Sign Up */
 .logTitle {
     color: #393939;
     font-size: 30px;
     margin: 10px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .loghr {
     border: 1px solid grey;
     margin-bottom: 35px;
     width: 70%;
+    text-align: center;
 }
 
 .form {
@@ -75,8 +76,11 @@ body {
     border: 0px;
     color: white;
 }
+#login{
+    margin-bottom: 100px;
+}
 #footer{
-    margin-top: 200px;
+    margin-top: 100px;
 }
 .logButton:hover {
     background: rgb(100, 248, 144);

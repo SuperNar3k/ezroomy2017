@@ -5,17 +5,40 @@ body {
 }
 .centerinfo {
 	position: relative;
-	height: 900px;
+	height: 80vh;
 	display: flex;
-	background-color: #856B52;
+	border: 1px solid rgba(0,0,0,0.18);
+    display: block;
+    padding: 25px;
+    width: 80vw;
+    text-align: center;
+    margin: 5% auto;
+	box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.11);
 }
-.imageProfile{
-	z-index: 0;
-	width:100%;
-	height:100%;
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}			
+#profile-image1 {
+    cursor: pointer;
+  
+     width: 100px;
+    height: 100px;
+	border:2px solid #03b1ce ;}
+	.tital{ font-size:16px; font-weight:500;}
+	 .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0}	
+.userProfileTitle {
+    color: #393939;
+    font-size: 30px;
+    margin: 10px;
+	text-transform: uppercase;
 }
-#userinfo{
-	text-decoration:underline;
+.userProfilehr {
+    border: 1px solid grey;
+    margin-bottom: 35px;
+    width: 70%;
 }
 div{
 	z-index: 2;

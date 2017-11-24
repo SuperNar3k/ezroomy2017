@@ -1,49 +1,39 @@
+<!DOCTYPE html>
+<?php session_start();
+include "database.php";?>
 <?php
-session_start();
-//----------
-//username needs to come from session
-//----------
-    if(isset($_POST["username"])) {
-        $username = $_POST["username"];
-       
-    } 
-    if(isset($_POST["password"])) {
-
-        $userpassword = $_POST["password"];
- 
-    }
-   
-    
-
-    include "database.php";
-
-    // $sql = "SELECT * FROM user WHERE username=:myUser";
-    // $stmt = $pdo->prepare($sql);
-    // $stmt->execute(["myUser" => $username]); //order of arrays corresponds order of ?
-    // $rows = $stmt->fetchAll(PDO::FETCH_OBJ);
-
-    $sql = "SELECT * FROM user WHERE username=:myUser";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(["myUser" => $username]); //order of arrays corresponds order of ?
-    $user = $stmt->fetch(PDO::FETCH_OBJ);
-
-    $rowCount = $stmt->rowCount();
-    //welcome to the hack
-    if ($rowCount != 1) { 
-
-        echo "invalid username or password";
-
-    } else if($rowCount==1){ //if only 1 user returned
-        //grab info from db
-        $dbusername = $user->username;
-        $dbpass = $user->password;
-
-        if($username == $dbusername && $userpassword == $dbpass) { 
-            $_SESSION["Username"] = $username;
-            header('Location: Profile.php'); 
-            echo ("You've reached the point you should move to a different website");
-        } else{
-             echo "invalid username or password";
-        }
-    }
-     ?>
+	//collecting user house id
+	$sql = "SELECT * FROM user WHERE username=:myUser";
+	$stmt = $pdo->prepare($sql);
+	$stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
+	$user = $stmt->fetch(PDO::FETCH_OBJ);
+	$dbuserhouseid = $user->homeid;
+	$dbuserphonenumber=$user->phonenumber;
+	$dbuseremail=$user->email;
+	?>
+<html lang="en">
+<head>
+   		<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link type="text/css" rel="stylesheet" href="css/index.css"/>
+		<link type="text/css" rel="stylesheet" href="css/userprofile.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+		<title></title>
+	</head>
+	<body>
+		 <?php include 'nav.php';?>
+ 		<div class="centerinfo">
+			<div class="userProfileTitle"><?php echo $_SESSION["Username"];?>'s Profile<hr class="userProfile"></hr></div>
+			<ul>
+				<li id="info">Username: <?php echo $_SESSION["Username"];?></li>
+				<li id="info">Email: <?php echo $dbuseremail;?></li>
+				<li id="info">Phone number: <?php echo $dbuserphonenumber;?></li>
+				<li id="info">House ID: <?php echo $dbuserhouseid?></li>
+				<li id="info">Housing Address: 1083 Chicago Street</li>
+			</ul>
+		</div>
+		<?php include "footer.php";?>
+		 
+	</body>
+</html>
