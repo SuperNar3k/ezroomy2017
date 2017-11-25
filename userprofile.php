@@ -23,15 +23,21 @@ include "database.php";?>
 	<body>
 		<div id="container">
 			<?php include 'nav.php';?>
-				<div class="body">
-					<div class="userProfileTitle"><?php echo $_SESSION["Username"];?>'s Profile<hr class="userProfile"></hr></div>
-					<ul>
-						<li id="info">Username: <?php echo $_SESSION["Username"];?></li>
-						<li id="info">Email: <?php echo $dbuseremail;?></li>
-						<li id="info">Phone number: <?php echo $dbuserphonenumber;?></li>
-						<li id="info">House ID: <?php echo $dbuserhouseid?></li>
-						<li id="info">Housing Address: 1083 Chicago Street</li>
-					</ul>
+				<div class="body" style="padding: 300px;">
+					<div  class = "mainPlat" style="background-color:#FFFFFF;">
+						<div class="userProfileTitle"><?php echo $_SESSION["Username"];?>'s Profile<hr class="userProfilehr"></hr></div>
+						<ul>
+							<li id="info">Username:     <?php echo $_SESSION["Username"];?></li>
+							
+							<li id="info">Email:     <?php echo $dbuseremail;?></li>
+							
+							<li id="info">Phone number:     <?php echo $dbuserphonenumber;?></li>
+							
+							<li id="info">House ID:     <?php echo $dbuserhouseid?></li>
+							
+							<li id="info">Housing Address:     1083 Chicago Street</li>
+						</ul>
+					</div>
 				</div>
 			<?php include "footer.php";?>
 		</div>

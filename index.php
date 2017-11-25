@@ -12,11 +12,19 @@
 	<body>
 		<div id = "container">
 			<?php include "nav.php";?>
+				<?php if(isset($_SESSION["Username"])) : ?>
+				<div class="body" style="background-color:#C7D290;height: 900px;">
+					<img class=imageIndex src="images/indexBar.jpg" alt="Split the Bill!">
+					<div id="startinfo">Split the Bills with Your Roomies!</div>
+					<button id="startbutton"><a href="homeprofile.php" id="startbuttontext">To Your Home!</a></button>
+				</div>
+				<?php else : ?>
 				<div class="body" style="background-color:#C7D290;height: 900px;">
 					<img class=imageIndex src="images/indexBar.jpg" alt="Split the Bill!">
 					<div id="startinfo">Split the Bills with Your Roomies!</div>
 					<button id="startbutton"><a href="login.php" id="startbuttontext">Start Now!</a></button>
 				</div>
+				<?php endif; ?>
 			<?php include "footer.php";?>
 		</div>
 	</body>
