@@ -1,0 +1,50 @@
+body {
+	font-family: 'Lato', sans-serif;
+	padding: 0px;
+	margin:0px;
+}
+.centerinfo {
+	position: relative;
+	height: 900px;
+	display: flex;
+	background-color: #856B52;
+}
+.imageProfile{
+	z-index: 0;
+	width:100%;
+	height:100%;
+}
+#userinfo{
+	text-decoration:underline;
+}
+div{
+	z-index: 2;
+	position: absolute;
+	color: rgb(255, 255, 255);
+	font-size: 60px;
+	top: 10%;
+	font-weight: bold;
+	align-content: top;
+	justify-content: space-around;
+	align-items: stretch;
+	background-size: 100% 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	text-transform: capitalize;
+}
+ul{
+	
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	list-style: none;
+	z-index: 2;
+	position: absolute;
+	color: rgb(255, 255, 255);
+	font-size: 30px;
+	top: 20%;
+	align-content: left;
+	justify-content: space-around;
+	align-items: stretch;
+	background-size: 100% 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+}

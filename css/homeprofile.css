@@ -52,6 +52,7 @@ table{
 	border-collapse: collapse;
 	
     top: 10%;
+
 	align-content: top;
 	justify-content: space-around;
 	flex-direction: row;
@@ -84,7 +85,7 @@ th, td {
 	position: relative;
 	color: rgba(197, 197, 197, 0.767);
 	font-size: 20px;
-    text-decoration: underline;
+  text-decoration: underline;
 	text-transform: capitalize;
 	justify-content: center;
 	align-items: stretch;

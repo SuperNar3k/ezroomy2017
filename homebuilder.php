@@ -22,4 +22,3 @@ if(isset($_POST["Rent4"])||isset($_POST["DueDate4"])||isset($_POST["Name4"])||is
     $stmt = $pdo->prepare($sql);
     $stmt->execute(["name" => $billname, "cost" => $billcost, "duedate" => $billduedate]);
 } 
-?>
