@@ -13,38 +13,40 @@
     <title>Log In</title>
 </head>
 <body>
+    <div id ="container">
 		<?php include "nav.php";?>
+            <div class="body">
+                <form id="signup" class="form" action="signupConfirmed.php" method="post">
+                        <h2 class="logTitle">Sign Up</h2>
+                        <hr class="loghr">
 
-    <form id="signup" class="form" action="signupConfirmed.php" method="post">
-            <h2 class="logTitle">Sign Up</h2>
-            <hr class="loghr">
-
-        <label class="field">
-            <input type="text" placeholder="Username*" name="usernameSignUp" id="usernameSignUp" class="input">
-        </label>
- 
-        <label class="field">
-            <input type="text" placeholder="Email*" name="emailSignUp" id="emailSignUp" class="input">
-        </label>        
-
-        <label class="field">
-            <input type="text" placeholder="Phone Number*" name="phoneSignUp" id="phoneSignUp" class="input">
-        </label>  
-
-        <label class="field">     
-            <input type="password" placeholder="Password*" name="passwordSignUp" id="passwordSignUp" class="input">
-        </label>
-
-        <label class="field">
+                    <label class="field">
+                        <input type="text" placeholder="Username*" name="usernameSignUp" id="usernameSignUp" class="input">
+                    </label>
             
-            <input type="password" placeholder="Confirm Password*" name="passwordConfirmSignUp" id="passwordConfirmLogIn" class="input">
-        </label>
+                    <label class="field">
+                        <input type="text" placeholder="Email*" name="emailSignUp" id="emailSignUp" class="input">
+                    </label>        
 
-        <a href="login.php" id="newAccount">Have an account?</a>
+                    <label class="field">
+                        <input type="text" placeholder="Phone Number*" name="phoneSignUp" id="phoneSignUp" class="input">
+                    </label>  
 
-        <input type="submit" class="logButton" value="Sign Up">
-        
-</form>
-		<?php include "footer.php";?>
+                    <label class="field">     
+                        <input type="password" placeholder="Password*" name="passwordSignUp" id="passwordSignUp" class="input">
+                    </label>
+
+                    <label class="field">
+                        
+                        <input type="password" placeholder="Confirm Password*" name="passwordConfirmSignUp" id="passwordConfirmLogIn" class="input">
+                    </label>
+
+                    <a href="login.php" id="newAccount">Have an account?</a>
+
+                    <input type="submit" class="logButton" value="Sign Up"> 
+                </form>
+            </div>
+        <?php include "footer.php";?>
+    </div>
 </body>
 </html>

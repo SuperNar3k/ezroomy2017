@@ -12,26 +12,28 @@
     <title>Log In</title>
 </head>
 <body>
-
+<div id="container">
     <?php include "nav.php"; ?>
+        <div class="body">
+            <form id="login" class="form" action="session.php" method="post" style="height:350px;">
+                    <h2 class="logTitle">Log In</h2>
+                    <hr class="loghr">
 
-    <form id="login" class="form" action="userprofile.php" method="post">
-            <h2 class="logTitle">Log In</h2>
-            <hr class="loghr">
+                <label class="field">
+                    <input type="text" placeholder="Username" name="username" id="usernameLogIn" class="input">
+                </label>
+                <label class="field">
+            
+                    <input type="password" placeholder="Password" name="password" id="passwordLogIn" class="input">
+                </label>
 
-        <label class="field">
-            <input type="text" placeholder="Username" name="username" id="usernameLogIn" class="input">
-        </label>
-        <label class="field">
-     
-            <input type="password" placeholder="Password" name="password" id="passwordLogIn" class="input">
-        </label>
+                <a href="signup.php" id="newAccount">Don't have an account?</a>
 
-        <a href="signup.php" id="newAccount">Don't have an account?</a>
-
-        <input type="submit" class="logButton" value="Log In">
-        
-</form>
-		 <?php include "footer.php";?>
+                <input type="submit" class="logButton" value="Log In">
+                
+            </form>
+        </div>
+    <?php include "footer.php";?>
+</div>
 </body>
 </html>
