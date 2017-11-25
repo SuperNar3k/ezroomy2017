@@ -2,7 +2,7 @@
 <?php session_start();
 include "database.php";?>
 <?php
-	//collecting user house id
+	//collecting user data and house id data 
 	$sql = "SELECT * FROM user WHERE username=:myUser";
 	$stmt = $pdo->prepare($sql);
 	$stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
@@ -10,6 +10,12 @@ include "database.php";?>
 	$dbuserhouseid = $user->homeid;
 	$dbuserphonenumber=$user->phonenumber;
 	$dbuseremail=$user->email;
+
+	$sql = "SELECT * FROM home WHERE id=:myHouseID";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(["myHouseID" => $dbuserhouseid]); //order of arrays corresponds order of ?
+    $user = $stmt->fetch(PDO::FETCH_OBJ);
+    $rowCounthouseID = $stmt->rowCount();
 	?>
 <html lang="en">
 <head>
@@ -32,10 +38,17 @@ include "database.php";?>
 							<li id="info">Email:     <?php echo $dbuseremail;?></li>
 							
 							<li id="info">Phone number:     <?php echo $dbuserphonenumber;?></li>
+							<?php 
+
+							if($rowCounthouseID==1) : ?>
 							
 							<li id="info">House ID:     <?php echo $dbuserhouseid?></li>
 							
 							<li id="info">Housing Address:     1083 Chicago Street</li>
+							<?php else : ?>
+							<li id="info">House ID:     No house has been claimed!</li>
+							<li id="info"><button id="housebutton"><a href="homebuilder.php" style="color:black">Claim a house!</a></button></li>
+							<?php endif; ?>
 						</ul>
 					</div>
 				</div>
