@@ -7,31 +7,31 @@ session_start();
         $username = $_POST["usernameSignUp"];
        
     } 
-    else{echo "No username";}
+    else{setcookie("ERROR","Username is blank.", time() + (86400 * 30), "/");header("location: error.php");}
     if(isset($_POST["emailSignUp"])) {
 
         $useremail = $_POST["emailSignUp"];
  
     }
-    else{echo "No email";}
+    else{setcookie("ERROR","Email is blank.", time() + (86400 * 30), "/");header("location: error.php");}
     if(isset($_POST["phoneSignUp"])) {
         
         $userphone = $_POST["phoneSignUp"];
          
     }
-    else{echo "No phone number";}
+    else{setcookie("ERROR","Phone number is blank.", time() + (86400 * 30), "/");header("location: error.php");}
     if(isset($_POST["passwordSignUp"])) {
         
         $userpassword = $_POST["passwordSignUp"];
          
     }
-    else{echo "No password";}
+    else{setcookie("ERROR","Password is blank.", time() + (86400 * 30), "/");header("location: error.php");}
     if(isset($_POST["passwordConfirmSignUp"])) {
         
         $userpasswordConfirm = $_POST["passwordConfirmSignUp"];
          
     }
-    else{echo "Confirm your password";}
+    else{setcookie("ERROR","Password confirm is blank.", time() + (86400 * 30), "/");header("location: error.php");}
             
    
     
@@ -67,19 +67,23 @@ session_start();
     //welcome to the hack
     if ($rowCountuser == 1) { 
 
-        echo "That username is already taken";
+        setcookie("ERROR","That username is already taken.", time() + (86400 * 30), "/");
+        header("location: error.php");
 
     }else if ($rowCountemail == 1) { 
         
-        echo "That email is already taken";
-        
+        setcookie("ERROR","That email is already taken.", time() + (86400 * 30), "/");
+        header("location: error.php");
+
     }else if ($rowCountphone == 1) { 
         
-        echo "That phone is already taken";
-        
+        setcookie("ERROR","That Phone number is already taken.", time() + (86400 * 30), "/");
+        header("location: error.php");
+
     }else if ($userpassword != $userpasswordConfirm) { 
         
-        echo "Your password does not match the other";
+        setcookie("ERROR","Your password does not match the other.", time() + (86400 * 30), "/");
+        header("location: error.php");
         
     }else{ //if only data is unique
         //create new user
