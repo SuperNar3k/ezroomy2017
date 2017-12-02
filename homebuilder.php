@@ -19,17 +19,34 @@ if(isset($_POST["Address"])){
     $stmt = $pdo->prepare($sql);
     $stmt->execute(["myUser" => $_SESSION["Username"],"houseid" => $houseID]); //order of arrays corresponds order of ?
 }
-if(isset($_POST["Name"])||isset($_POST["Cost"])||isset($_POST["Duedate"])){
-
+if(isset($_POST["Name"])||isset($_POST["Cost"])||isset($_POST["Duedate"])||isset($_POST["Bill"])){
     $billcost = $_POST["Cost"];
 
     $billduedate = $_POST["DueDate"];
 
     $billusers = $_POST["Name"];
 
-    $sql = "INSERT INTO `bill`(`name`, `value`, `due date`) VALUES (:name, :cost, :duedate)";
+    $billname = $_POST["Bill"];
+
+    $sql = "INSERT INTO `bill`(`name`, `value`, `due date`,`rp`) VALUES (:name, :cost, :duedate,:rp)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(["name" => $billname, "cost" => $billcost, "duedate" => $billduedate]);
+    $stmt->execute(["name" => $billname, "cost" => $billcost, "duedate" => $billduedate, "rp" => $billusers]);
+
+    $sql = "SELECT * FROM user WHERE username=:myUser";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
+    $user = $stmt->fetch(PDO::FETCH_OBJ);
+    $dbuserhouseid = $user->homeid;
+
+    $sql = "SELECT * FROM bill WHERE name=:myBill";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(["myBill" => $billname]); //order of arrays corresponds order of ?
+    $bill = $stmt->fetch(PDO::FETCH_OBJ);
+    $dbbillid = $bill->id;
+
+    $sql = "INSERT INTO `homebill`(`homeid`, `billid`) VALUES (:homeid, :billid)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(["homeid"=> $dbuserhouseid, "billid"=> $dbbillid]);
 }
 
 $sql = "SELECT * FROM user WHERE username=:myUser";
@@ -51,6 +68,7 @@ $rowCounthouseID = $stmt->rowCount();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/homeprofile.css">
     <link rel="stylesheet" href="css/homebuilder.css">
 
     <script src="js/jquery.js"></script>
@@ -65,27 +83,38 @@ $rowCounthouseID = $stmt->rowCount();
             <div class = "content" style="height=100%;width=100%">
                     <?php if($rowCounthouseID==1) : ?>
                             
-                        <div id ="Homebar">Home</div>
+                        <div id ="Homebar">Home Editor</div>
                         <div id="Residentsbar">
                         <a style="font-size:25px">Residents: <a id="userlist"><?php echo $_SESSION["Username"];?></a></a>
-
-                        <table>
+                        <form id="billadder" action="homebuilder.php" method="post">
+                        <table border ="1">
+                        <tr>
+                            <th id="header1">Bill</th>
+                            <th id="header1">Date Due</th>
+                            <th id="header1">Name</th>
+                            <th id="header1">Cost</th>
+                        </tr>
                             <tr>
-                                <th id="header1">Bill</th>
-                                <th id="header1">Date Due</th>
-                                <th id="header1">Name</th>
-                                <th id="header1">Cost</th>
-                            </tr>
-                            <tr>
-                                <form action= "homebuilder.php">
-                                <td><input id = Rent type="text"></td>
-                                <td><input id = DueDate type="text"></td>
-                                <td><input id = Name type="text"></td>
-                                <td><input id = Cost type="number" ></td>
-                                </form>
-                            </tr>
-                        </table>
-
+                            
+                            <td><input name = Bill placeholder = "eg: Electricity" type="text"></td>
+                            <td><input name = DueDate placeholder = "eg: 07/12/17" type="text"></td>
+                            <td><input name = Name placeholder = "eg: Hank Adams" type="text"></td>
+                            <td><input name = Cost placeholder = "eg: $60129" type="number" ></td>
+                            
+                        </tr>
+                    </table>
+                    <input type="submit" class="submitbill" value="Submit">
+                    </form>
+                    <div id ="Homebar">Bills</div>
+                    <table border ="1">
+                        <tr>
+                            <th id="header1">Bill</th>
+                            <th id="header1">Date Due</th>
+                            <th id="header1">Name</th>
+                            <th id="header1">Cost</th>
+                        </tr>
+                            
+                    </table>
 				    <?php else : ?>
                     <form id="login" class="form" action="homebuilder.php" method="post">
                     <h2 class="homebuilderTitle">Home Setup</h2>
@@ -101,6 +130,7 @@ $rowCounthouseID = $stmt->rowCount();
 					<?php endif; ?>
             </div>
         </div>
+    </div>
         <?php include "footer.php"; ?>  
     </div>
 </body>

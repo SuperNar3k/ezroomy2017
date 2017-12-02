@@ -61,8 +61,27 @@ body {
 #newAccount:hover {
     color: rgb(37, 139, 255);
 }
-
-
+.submitbill {
+    transition: 300ms;
+    height: 50px;
+    width: 20%;
+    font-size: 30px;
+    margin-top: 30px;
+    font-weight: 100;
+    background: rgb(74, 202, 111);
+    border-radius: 2px;
+    border: 0px;
+    color: white;
+}
+.submitbill:hover {
+    background: rgb(100, 248, 144);
+    transform: translateY(-5px);
+    transition: 300ms;
+    color: #393939;
+}
+.submitbill:focus {
+    outline: none;
+}
 .submithouse {
     transition: 300ms;
     height: 50px;
