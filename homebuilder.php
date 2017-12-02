@@ -2,9 +2,7 @@
 <?php
 session_start();
 include "database.php";
-echo ("1");
 if(isset($_POST["Address"])){
-    echo ("2");
     $homeAddress = $_POST["Address"];
 
     $sql = "INSERT INTO `home`(`id`, `address`) VALUES (NULL, :address)";

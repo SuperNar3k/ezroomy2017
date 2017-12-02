@@ -12,7 +12,7 @@
     box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
 }
 td:hover,th:hover {
-    background-color: #b1b1b13d;
+    background-color: #b1b1b14d;
     box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.15);
 }
 body {
@@ -44,27 +44,36 @@ body {
 	transform: translateY(-5px);
     box-shadow: 0px 15px 15px -10px rgba(0,0,0,0.50);
 }	
+.homeProfilehr {
+    border: 1px solid grey;
+    margin-bottom: 35px;
+    width: 50%;
+}
 table{
-    z-index: 2;
+	z-index: 2;
 	position: relative;
 	color: rgb(0, 0, 0);
     font-size: 30px;
 	border-collapse: collapse;
-	
+	width: 900px;
     top: 10%;
-
 	align-content: top;
 	justify-content: space-around;
 	flex-direction: row;
 	flex-wrap: wrap;
 	text-transform: capitalize;
 }
-th, td {
-    border-bottom: 1px solid rgba(221, 221, 221, 0.301);
-    border-right: 1px solid rgba(221, 221, 221, 0.301);
-    border-left: 1px solid rgba(221, 221, 221, 0.301);
-    border-top: 1px solid rgba(221, 221, 221, 0.301);
-    padding: 10px;
+th, td{
+    border-bottom: 1px solid rgba(65, 65, 65, 0.25);
+    border-right: 1px solid rgba(65, 65, 65, 0.25);
+    border-left: 1px solid rgba(65, 65, 65, 0.25);
+    border-top: 1px solid rgba(65, 65, 65, 0.25);
+	padding: 10px;
+	flex-wrap: wrap;
+}
+#header1{
+	margin-left: 200px;
+	margin-right: 5%;
 }
 .content{
 	z-index: 2;

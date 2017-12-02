@@ -31,39 +31,48 @@ $rowCounthouseID = $stmt->rowCount();
 <body>
     <div id="container">
         <?php include "nav.php"; ?>
-        <div class="body" style="min-height:700px;">
+        <div class="body">
             <div class = "content" style="height=100%;width=100%">
                     <?php if($rowCounthouseID==1) : ?>
                             
-                        <div id ="Homebar">Home</div>
+                        <div id ="Homebar">Home<hr class="homeProfilehr"></hr></div>
                         <div id="Residentsbar">
                         <a style="font-size:25px">Residents: <a id="userlist"><?php echo $_SESSION["Username"];?></a></a>
 
-                        <table>
+                        <table border ="1">
                             <tr>
                                 <th id="header1">Bill</th>
                                 <th id="header1">Date Due</th>
                                 <th id="header1">Name</th>
                                 <th id="header1">Cost</th>
                             </tr>
+                            <?php if(1==1) : ?> 
                             <tr>
-                                <form action= "homebuilder.php">
+                                <td COLSPAN=4 ALIGN=CENTER>
+                                You have no bills added
+                                <button id="housebutton" style="margin-top:0%;font-size:30px"><a href="homebuilder.php" style="color:black">Add Bills!</a></button>
+                            </td>
+                            </tr>
+                            
+                                <?php else : ?>
+                                <tr>
                                 <td><input id = Rent type="text"></td>
                                 <td><input id = DueDate type="text"></td>
                                 <td><input id = Name type="text"></td>
                                 <td><input id = Cost type="number" ></td>
-                                </form>
                             </tr>
+                            	<?php endif; ?>
                         </table>
 
 				    <?php else : ?>
                             <div style="font-size:30px;">
 							I'm sorry! But it appears no house has been claimed!</div>
-							<button id="housebutton"><a href="homebuilder.php" style="color:black">Claim a house!</a></button>
+							<button id="housebutton"><a href="homebuilder.php" style="color:black">Claim a House!</a></button>
 					<?php endif; ?>
             </div>
-        </div>
-        <?php include "footer.php"; ?>  
+        </div>  
     </div>
+    <?php include "footer.php"; ?> 
+</div>
 </body>
 </html>
