@@ -6,45 +6,41 @@ if(isset($_POST["Address"])) {
         $homeAddress = $_POST["Address"];
        
 } 
-if(isset($_POST["DueDate"])) {
+if(isset($_POST["Address"])){
+    $sql = "INSERT INTO `home`(`address`) VALUES (:address)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(["address" => $homeAddress]);
 
-        $billduedate = $_POST["DueDate"];
- 
+    $sql = "SELECT * FROM user WHERE username=:myUser";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
+    $user = $stmt->fetch(PDO::FETCH_OBJ);
+    $user->homeid = $homeAddress;
 }
-if(isset($_POST["Name"])) {
-    $billusers = $_POST["Name"];
-   
-} 
-if(isset($_POST["Cost"])) {
+if(isset($_POST["Name"])||isset($_POST["Cost"])||isset($_POST["Duedate"])){
 
     $billcost = $_POST["Cost"];
 
+    $billduedate = $_POST["DueDate"];
+
+    $billusers = $_POST["Name"];
+
+    $sql = "INSERT INTO `bill`(`name`, `value`, `due date`) VALUES (:name, :cost, :duedate)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(["name" => $billname, "cost" => $billcost, "duedate" => $billduedate]);
 }
+
 $sql = "SELECT * FROM user WHERE username=:myUser";
 $stmt = $pdo->prepare($sql);
 $stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
 $user = $stmt->fetch(PDO::FETCH_OBJ);
 $dbuserhouseid = $user->homeid;
-$dbuserphonenumber=$user->phonenumber;
-$dbuseremail=$user->email;
 
 $sql = "SELECT * FROM home WHERE id=:myHouseID";
 $stmt = $pdo->prepare($sql);
 $stmt->execute(["myHouseID" => $dbuserhouseid]); //order of arrays corresponds order of ?
-$user = $stmt->fetch(PDO::FETCH_OBJ);
+$home = $stmt->fetch(PDO::FETCH_OBJ);
 $rowCounthouseID = $stmt->rowCount();
-$rowCountaddress = $home->address->rowCount();
-
-if(isset($_POST["Address"])){
-    $sql = "INSERT INTO `home`(`address`) VALUES (:address)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(["address" => $homeAddress]);
-}
-if(isset($_POST["Name"])||isset($_POST["Cost"])||isset($_POST["Duedate"])){
-    $sql = "INSERT INTO `bill`(`name`, `value`, `due date`) VALUES (:name, :cost, :duedate)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(["name" => $billname, "cost" => $billcost, "duedate" => $billduedate]);
-}
 //collecting user house id
 ?>
 <html lang="en">
