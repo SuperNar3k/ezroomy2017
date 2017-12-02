@@ -2,20 +2,24 @@
 <?php
 session_start();
 include "database.php";
-if(isset($_POST["Address"])) {
-        $homeAddress = $_POST["Address"];
-       
-} 
+echo ("1");
 if(isset($_POST["Address"])){
-    $sql = "INSERT INTO `home`(`address`) VALUES (:address)";
+    echo ("2");
+    $homeAddress = $_POST["Address"];
+
+    $sql = "INSERT INTO `home`(`id`, `address`) VALUES (NULL, :address)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(["address" => $homeAddress]);
 
-    $sql = "SELECT * FROM user WHERE username=:myUser";
+    $sql = "SELECT * FROM home WHERE address=:myHouseAddress";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
-    $user = $stmt->fetch(PDO::FETCH_OBJ);
-    $user->homeid = $homeAddress;
+    $stmt->execute(["myHouseAddress" => $homeAddress]); //order of arrays corresponds order of ?
+    $home = $stmt->fetch(PDO::FETCH_OBJ);
+    $houseID = $home->id;
+
+    $sql = "UPDATE `user` SET homeid=:houseid WHERE username=:myUser";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(["myUser" => $_SESSION["Username"],"houseid" => $houseID]); //order of arrays corresponds order of ?
 }
 if(isset($_POST["Name"])||isset($_POST["Cost"])||isset($_POST["Duedate"])){
 
@@ -90,7 +94,7 @@ $rowCounthouseID = $stmt->rowCount();
                     <hr class="homebuilderTitlehr">
 
                         <label class="field">
-                            <input type="text" placeholder="Address" name="username" id="houseAddress" class="input">
+                            <input type="text" placeholder="Address" name="Address" id="houseAddress" class="input">
                         </label>
                         <input type="submit" class="submithouse" value="Submit">
                         
