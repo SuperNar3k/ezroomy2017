@@ -57,7 +57,8 @@ $rowCounthouseID = $stmt->rowCount();
                         </table>
 
 				    <?php else : ?>
-							I'm sorry! But it appears no house has been claimed!
+                            <div style="font-size:30px;">
+							I'm sorry! But it appears no house has been claimed!</div>
 							<button id="housebutton"><a href="homebuilder.php" style="color:black">Claim a house!</a></button>
 					<?php endif; ?>
             </div>
