@@ -2,53 +2,6 @@
 <?php
 session_start();
 include "database.php";
-if(isset($_POST["Address"])){
-    $homeAddress = $_POST["Address"];
-
-    $sql = "INSERT INTO `home`(`id`, `address`) VALUES (NULL, :address)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(["address" => $homeAddress]);
-
-    $sql = "SELECT * FROM home WHERE address=:myHouseAddress";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(["myHouseAddress" => $homeAddress]); //order of arrays corresponds order of ?
-    $home = $stmt->fetch(PDO::FETCH_OBJ);
-    $houseID = $home->id;
-
-    $sql = "UPDATE `user` SET homeid=:houseid WHERE username=:myUser";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(["myUser" => $_SESSION["Username"],"houseid" => $houseID]); //order of arrays corresponds order of ?
-}
-if(isset($_POST["Name"])||isset($_POST["Cost"])||isset($_POST["Duedate"])||isset($_POST["Bill"])){
-    $billcost = $_POST["Cost"];
-
-    $billduedate = $_POST["DueDate"];
-
-    $billusers = $_POST["Name"];
-
-    $billname = $_POST["Bill"];
-
-    $sql = "INSERT INTO `bill`(`name`, `value`, `due date`,`rp`) VALUES (:name, :cost, :duedate,:rp)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(["name" => $billname, "cost" => $billcost, "duedate" => $billduedate, "rp" => $billusers]);
-
-    $sql = "SELECT * FROM user WHERE username=:myUser";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
-    $user = $stmt->fetch(PDO::FETCH_OBJ);
-    $dbuserhouseid = $user->homeid;
-
-    $sql = "SELECT * FROM bill WHERE name=:myBill";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(["myBill" => $billname]); //order of arrays corresponds order of ?
-    $bill = $stmt->fetch(PDO::FETCH_OBJ);
-    $dbbillid = $bill->id;
-
-    $sql = "INSERT INTO `homebill`(`homeid`, `billid`) VALUES (:homeid, :billid)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(["homeid"=> $dbuserhouseid, "billid"=> $dbbillid]);
-}
-
 $sql = "SELECT * FROM user WHERE username=:myUser";
 $stmt = $pdo->prepare($sql);
 $stmt->execute(["myUser" => $_SESSION["Username"]]); //order of arrays corresponds order of ?
@@ -61,6 +14,14 @@ $stmt->execute(["myHouseID" => $dbuserhouseid]); //order of arrays corresponds o
 $home = $stmt->fetch(PDO::FETCH_OBJ);
 $rowCounthouseID = $stmt->rowCount();
 //collecting user house id
+
+$sql = "SELECT billid FROM homebill WHERE homeid=:myHouseID";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(["myHouseID" => $dbuserhouseid]); //order of arrays corresponds order of ?
+$rowCountBills = $stmt->rowCount();
+$a=array();
+array_push($a,$stmt->fetchALL(PDO::FETCH_COLUMN, 0));
+//collecting home bills
 ?>
 <html lang="en">
 <head>
@@ -86,7 +47,7 @@ $rowCounthouseID = $stmt->rowCount();
                         <div id ="Homebar">Home Editor</div>
                         <div id="Residentsbar">
                         <a style="font-size:25px">Residents: <a id="userlist"><?php echo $_SESSION["Username"];?></a></a>
-                        <form id="billadder" action="homebuilder.php" method="post">
+                        <form id="billadder" action="billcompiler.php" method="post">
                         <table border ="1">
                         <tr>
                             <th id="header1">Bill</th>
@@ -97,7 +58,7 @@ $rowCounthouseID = $stmt->rowCount();
                             <tr>
                             
                             <td><input name = Bill placeholder = "eg: Electricity" type="text"></td>
-                            <td><input name = DueDate placeholder = "eg: 07/12/17" type="text"></td>
+                            <td><input name = DueDate placeholder = "eg: 2007/12/17" type="text"></td>
                             <td><input name = Name placeholder = "eg: Hank Adams" type="text"></td>
                             <td><input name = Cost placeholder = "eg: $60129" type="number" ></td>
                             
@@ -113,10 +74,26 @@ $rowCounthouseID = $stmt->rowCount();
                             <th id="header1">Name</th>
                             <th id="header1">Cost</th>
                         </tr>
+                        <?php 
+                        for($i = 0; $i <$rowCountBills; $i++){
                             
+                            $sql = "SELECT * FROM bill WHERE id=:myBill";
+                            $stmt = $pdo->prepare($sql);
+                            $stmt->execute(["myBill" => $a[0][$i]]); 
+                            $data = array();
+                            $data = $stmt->fetchAll();
+                            //collecting bill information
+
+                            echo '<tr>';
+                            echo '<th>',$data[0][1],'</th>';
+                            echo '<th>',$data[0][3],'</th>';
+                            echo '<th>',$data[0][4],'</th>';
+                            echo '<th>','$',$data[0][2],'</th>';
+                            echo'</tr>';}
+                        ?>
                     </table>
 				    <?php else : ?>
-                    <form id="login" class="form" action="homebuilder.php" method="post">
+                    <form id="login" class="form" action="billcompiler.php" method="post">
                     <h2 class="homebuilderTitle">Home Setup</h2>
                     <hr class="homebuilderTitlehr">
 

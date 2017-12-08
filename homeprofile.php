@@ -15,6 +15,14 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute(["myHouseID" => $dbuserhouseid]); //order of arrays corresponds order of ?
 $user = $stmt->fetch(PDO::FETCH_OBJ);
 $rowCounthouseID = $stmt->rowCount();
+
+$sql = "SELECT billid FROM homebill WHERE homeid=:myHouseID";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(["myHouseID" => $dbuserhouseid]); //order of arrays corresponds order of ?
+$rowCountBills = $stmt->rowCount();
+$a=array();
+array_push($a,$stmt->fetchALL(PDO::FETCH_COLUMN, 0));
+//collecting home bills
 ?>
 <html lang="en">
 <head>
@@ -46,7 +54,7 @@ $rowCounthouseID = $stmt->rowCount();
                                 <th id="header1">Name</th>
                                 <th id="header1">Cost</th>
                             </tr>
-                            <?php if(1==1) : ?> 
+                            <?php if($rowCountBills==0) : ?> 
                             <tr>
                                 <td COLSPAN=4 ALIGN=CENTER>
                                 You have no bills added
@@ -55,12 +63,23 @@ $rowCounthouseID = $stmt->rowCount();
                             </tr>
                             
                                 <?php else : ?>
-                                <tr>
-                                <td><input id = Rent type="text"></td>
-                                <td><input id = DueDate type="text"></td>
-                                <td><input id = Name type="text"></td>
-                                <td><input id = Cost type="number" ></td>
-                            </tr>
+                            <?php 
+                        for($i = 0; $i <$rowCountBills; $i++){
+                            
+                            $sql = "SELECT * FROM bill WHERE id=:myBill";
+                            $stmt = $pdo->prepare($sql);
+                            $stmt->execute(["myBill" => $a[0][$i]]); 
+                            $data = array();
+                            $data = $stmt->fetchAll();
+                            //collecting bill information
+
+                            echo '<tr>';
+                            echo '<th>',$data[0][1],'</th>';
+                            echo '<th>',$data[0][3],'</th>';
+                            echo '<th>',$data[0][4],'</th>';
+                            echo '<th>','$',$data[0][2],'</th>';
+                            echo'</tr>';}
+                        ?>
                             	<?php endif; ?>
                         </table>
 
