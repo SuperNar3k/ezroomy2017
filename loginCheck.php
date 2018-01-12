@@ -1,5 +1,5 @@
 <?php
-    if(!(isset($_SESSION["StudentID"]))){
+    if(!(isset($_SESSION["Username"]))){
         header("Location: index.php");
     }
 ?>
