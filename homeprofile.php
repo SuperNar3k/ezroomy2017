@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php session_start();
+include "loginCheck.php";
 include "database.php";
 //collecting user house id
 $sql = "SELECT * FROM user WHERE username=:myUser";
