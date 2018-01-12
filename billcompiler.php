@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "loginCheck.php";
 include "database.php";
 if(isset($_POST["Address"])){
     $homeAddress = $_POST["Address"];
