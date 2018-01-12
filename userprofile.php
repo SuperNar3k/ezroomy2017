@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <?php session_start();
+include "loginCheck.php";
 include "database.php";?>
 <?php
 	//collecting user data and house id data 
